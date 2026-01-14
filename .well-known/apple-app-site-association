@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [ "GE8BT8LF5K.in.juspay.emvco3ds-ios-refapp" ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all paths"
+          }
+        ]
+      }
+    ]
+  }
+}
