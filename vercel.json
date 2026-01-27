@@ -10,6 +10,14 @@
       }
     },
     {
+      "src": "/.well-known/assetlinks.json",
+      "dest": "/.well-known/assetlinks.json",
+      "headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
+    },
+    {
       "src": "/apple-app-site-association",
       "dest": "/.well-known/apple-app-site-association",
       "headers": {
