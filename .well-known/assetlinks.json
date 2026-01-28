@@ -3,6 +3,6 @@
   "target": {
     "namespace": "android_app",
     "package_name": "com.ul.emvco3ds.sdk.referenceapp.sdkImpl.release",
-    "sha256_cert_fingerprints": ["7D:B0:DE:13:20:3F:96:B6:BC:7A:19:1F:EF:83:9F:09:35:E9:F4:C7:B4:A1:0C:A7:61:95:06:D7:CA:7B:8C:F9"]
+    "sha256_cert_fingerprints": ["17:24:9E:AE:5D:9D:C1:29:EA:91:BD:BA:E2:A9:B9:34:3F:5D:13:56:82:26:0D:EC:4C:D0:98:7B:D9:98:4F:4B"]
   }
 }]
