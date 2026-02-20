@@ -1,0 +1,3213 @@
+{
+  "version": "2",
+  "config": {
+    "version": "v0",
+    "release_config_timeout": 5000,
+    "boot_timeout": 5000,
+    "properties": {
+      "sdk_config": {
+        "defaultChannels": [],
+        "enableTrackerFallback": false,
+        "godelConfig": {
+          "webViewAccess": {
+            "whitelistedClientIds": []
+          }
+        },
+        "headURLs": {
+          "production": [],
+          "sandbox": []
+        },
+        "healthCheckInterval": 3000,
+        "iframeSettings": {
+          "skipSrcDoc": false
+        },
+        "intentURIs": [
+          "upi://pay",
+          "phonepe://pay",
+          "paytmmp://pay",
+          "tez://upi/pay",
+          "credpay://upi/pay"
+        ],
+        "logChannelsConfig": [],
+        "logToS3": false,
+        "logsConfig": {
+          "batchCount": 75,
+          "channels": {},
+          "encryptionLevelKey": "encryption",
+          "errorUrl": "",
+          "fallBackPublicKeys": [],
+          "fallBackUrl": [],
+          "labelsToDrop": [],
+          "logHeaders": {
+            "x-client-id": "${client_id}",
+            "x-merchant-id": "${merchant_id}"
+          },
+          "logPusherTimerWithChannel": 3000,
+          "logsUrlKey": "https://logs.juspay.in/godel/analytics",
+          "logsUrlKeySandbox": "https://debug.logs.juspay.net/godel/analytics",
+          "priority": 5,
+          "publicKey": {
+            "e": "AQAB",
+            "kid": "production_log_public_key_26_03_2021",
+            "kty": "RSA",
+            "n": "zQjBRk_OxUOfoamCGGRaHn_kiCFjKJkUjnInvCHyh_6nwr98VEE9_QcZO07NjztTZYAGyqpO7TV08X9U2S8VOdQl6b1yVQHF1O6AhEFZTaxH71ro9ljVTvyhlzEfvPvuICLPKwu19N4g6jKU9TJpec63pwQ1GTrVS6L5JMLiYtlR5onMG6NEBtYwbFlpGKTlSJGaFQ6JHFV_S7Q3txReCVnD8AM5pHiORMYOsYz-zE4secDMrbILC9ESCCbIurc8SGXkinBwETm2HZbPZnnSsctuXPRDZXZnz9F8M-lKtE1xQS5l4mkvzLWPbFbIsRx_6VVJxFRAJ0Q4M1Gl6HcZ2Q"
+          },
+          "publicKeySandbox": {
+            "e": "AQAB",
+            "kid": "sandbox-log-24-03-2021",
+            "kty": "RSA",
+            "n": "zgKC-M2wFCMxpeoSEdqaFjhTYSbii2-tF0d3IRkuHB810cV_r17r0wZuI9biXjgT-TJdeGE6qdN_haqZFxY8RkQPaN8UXNtaM2MLPdfEPcpkY4E37NHp7a9OrcYYMmGSD_-w3rkmyzkjinqWHhlOnAObQWn5bw0jy4jF6JnGCEIyE-vkYsTZ9doId8ePsRFNEjsH45qSERF-GwQkDUVBOz7_BCKIodVs65eBLsl2I7JEP5vLvAu7hNZ-6AeXj8bFVqyflKVtN5ztNgpMgmgvWAqF4bH017b8Wocj1NelB_3XNq9E7cSJkMtbGfpZhmd1KzNnCx3yPPrGcbFuGEXV0Q"
+          },
+          "pushTimer": 10000,
+          "pusherTimerKey": "10.0",
+          "retryAttempts": -1,
+          "sessioniseTimer": 2000,
+          "shouldPush": true,
+          "workingLogger": "json-array"
+        },
+        "preRenderConfig": {
+          "common": "1.0",
+          "meesho": "1.0"
+        },
+        "runHealthCheck": false,
+        "safemode": {
+          "blacklist": {
+            "sdkVersions": [
+              "2.0.0",
+              "2.0.1",
+              "2.0.2",
+              "2.0.3",
+              "2.0.4",
+              "2.1.0",
+              "2.1.1",
+              "2.1.2"
+            ]
+          },
+          "enabled": false
+        },
+        "sequentialLoadClients": [],
+        "sequentialLoadEnable": false,
+        "uiFeatures": {
+          "nbListItemCaching": {
+            "bgCacheCapacity": 4,
+            "blacklistedClientIds": [],
+            "useCache": true
+          }
+        },
+        "unifiedLoader": false,
+        "upi": {
+          "enableRegisterService": false,
+          "mergeGstFromCache": false
+        },
+        "url": {
+          "activeActiveDomain": {
+            "prod": "https://payments.juspay.in",
+            "sandbox": "https://payments.sandbox.juspay.in"
+          },
+          "api": {
+            "fallbackUrls": [
+              "https://api-ns3.juspay.in",
+              "https://public.releases.juspay.in/wapi"
+            ],
+            "prod": "https://public.releases.juspay.in/wapi",
+            "production_static1": "https://api-ns1.juspay.in",
+            "sandbox": "https://sandbox.juspay.in"
+          },
+          "assets": {
+            "prod": "https://assets.juspay.in",
+            "sandbox": "https://sandbox.assets.juspay.in"
+          },
+          "endUrl": {
+            "prod": [
+              "https://olamoney.com",
+              "https://www.reload.in/recharge/",
+              ".*www.reload.in/payment/f.*",
+              ".*sandbox.juspay.in\\/thankyou.*",
+              ".*wallet.juspay.dev:8080/recharge/payment.*",
+              ".*www.foodstag.in\\/payment-gateway\\/handle-payment.*",
+              ".*sandbox.juspay.in\\/end.*",
+              ".*voonik.org\\/checkout\\/juspay_callback",
+              ".*localhost.*",
+              ".*api.juspay.in\\/end.*"
+            ],
+            "sandbox": [
+              "https://olamoney.com",
+              "https://www.reload.in/recharge/",
+              ".*www.reload.in/payment/f.*",
+              ".*sandbox.juspay.in\\/thankyou.*",
+              ".*wallet.juspay.dev:8080/recharge/payment.*",
+              ".*www.foodstag.in\\/payment-gateway\\/handle-payment.*",
+              ".*sandbox.juspay.in\\/end.*",
+              ".*voonik.org\\/checkout\\/juspay_callback",
+              ".*localhost.*",
+              ".*api.juspay.in\\/end.*"
+            ]
+          },
+          "webReleaseDomain": {
+            "prod": "https://public.releases.juspay.in",
+            "sandbox": "https://sandbox.assets.juspay.in"
+          }
+        },
+        "useCommitClientIds": {},
+        "variant_ids": [],
+        "version": "1.62.2",
+        "whiteListedEventsV2": []
+      },
+      "tenantInfo": {
+        "assetsDomain": "https://assets.juspay.in",
+        "defaultClientId": ""
+      }
+    }
+  },
+  "package": {
+    "version": "3.8.1",
+    "name": "Hyper OS",
+    "index": {
+      "url": "https://assets.juspay.in/juspay/hyper-os/in.juspay.hyperos/release/2.0rc1/3.8.0/v1-boot_loader.jsa",
+      "file_path": "v1-boot_loader.jsa"
+    },
+    "important": [],
+    "lazy": [
+      {
+        "file_path": "images/add_new_card_dark.png",
+        "url": "https://payments.juspay.in/hyper/images/common/add_new_card_dark.png",
+        "checksum": "25169d01966d8825f52bb5ac98b9fa5fc68b6d9fc4f0f44c18c76c85b06f1b50"
+      },
+      {
+        "file_path": "images/add_new_card_light.png",
+        "url": "https://payments.juspay.in/hyper/images/common/add_new_card_light.png",
+        "checksum": "8dd1835eff1b1b9067430ee1a0bcb46cd9e2b2e8ba4c4a68eefd67e859bf8b93"
+      },
+      {
+        "file_path": "images/add_upi_id.png",
+        "url": "https://payments.juspay.in/hyper/images/common/add_upi_id.png",
+        "checksum": "7771d2d8ca43ef489dab7dff616e067595d80ec0901dee52fe984b752be93348"
+      },
+      {
+        "file_path": "images/amazonpay_wallet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/amazonpay_wallet.png",
+        "checksum": "781a7ad472291155d61a034c09a326e5340893511f52dc8c1f8c95e3a64316b1"
+      },
+      {
+        "file_path": "images/ambient_shadow_zeight.9.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ambient_shadow_zeight.9.png",
+        "checksum": "3355ced6d68245ac5819b5d1dd3ed550e0a830fc80864eedace278dd32826efe"
+      },
+      {
+        "file_path": "images/approve_upi_payment.png",
+        "url": "https://payments.juspay.in/hyper/images/common/approve_upi_payment.png",
+        "checksum": "eb97b69b7fa1867c392579f073b8eb5324b0d2fcaeb8b2c615a8752fd5065310"
+      },
+      {
+        "file_path": "images/arrow_bullet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/arrow_bullet.png",
+        "checksum": "a71bec8b145f814448a972d954db4bda243338829da97af4159a4dea97a0ded3"
+      },
+      {
+        "file_path": "images/axis_logo_short.png",
+        "url": "https://payments.juspay.in/hyper/images/common/axis_logo_short.png",
+        "checksum": "fea0d2c44ef92d641e6c013933863953f4c647bc04343fecaffeb598f7e3222e"
+      },
+      {
+        "file_path": "images/back_arrow_fmcg.png",
+        "url": "https://payments.juspay.in/hyper/images/common/back_arrow_fmcg.png",
+        "checksum": "3df14dafce4ea768adfd8eef7045e25234182701e929b8b645d6127c1fb58932"
+      },
+      {
+        "file_path": "images/bank_axis_name.png",
+        "url": "https://payments.juspay.in/hyper/images/common/bank_axis_name.png",
+        "checksum": "46c48b6d4db47c386ef998ff5f49f129e044c172770f3b32b05bf6ba43306fd2"
+      },
+      {
+        "file_path": "images/bank_icici_name.png",
+        "url": "https://payments.juspay.in/hyper/images/common/bank_icici_name.png",
+        "checksum": "48da462abbb5a7e4c92fe296551d197478bdb993be4822a7039c490103038871"
+      },
+      {
+        "file_path": "images/bell_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/bell_upi.png",
+        "checksum": "62d4b7a8113d6ef3e78a61ec4b7b10ad60c4026db9972abdfc14ebeb581289ab"
+      },
+      {
+        "file_path": "images/black_tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/black_tick.png",
+        "checksum": "ec631945bf44922a75600521aa2507a60e1d5806bc9c52c39d6266490c249b08"
+      },
+      {
+        "file_path": "images/branding.png",
+        "url": "https://payments.juspay.in/hyper/images/common/branding.png",
+        "checksum": "3f76091274967024c869e9469891fbbebb1b8622e64ce55f5e276d044e6fd701"
+      },
+      {
+        "file_path": "images/bullet_icon_one.png",
+        "url": "https://payments.juspay.in/hyper/images/common/bullet_icon_one.png",
+        "checksum": "0f0d5f2eba4ae03e923c77ad8d0f99fe194836b1c097b86a5c93255f74ef3380"
+      },
+      {
+        "file_path": "images/bullet_icon_two.png",
+        "url": "https://payments.juspay.in/hyper/images/common/bullet_icon_two.png",
+        "checksum": "a66c56c56f2524d6406698faed39c9214162095f6c0b9400cda5a3bc3fb6314a"
+      },
+      {
+        "file_path": "images/bullet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/bullet.png",
+        "checksum": "8d3eb56fb6090092f8679bfd3547bf44f93d7e71209972c98e32f3e9bb88f7af"
+      },
+      {
+        "file_path": "images/card_security.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_security.png",
+        "checksum": "3963cc7d67573dc53281de63072d0cd51765d817d8d48310bf76144dcfa7e777"
+      },
+      {
+        "file_path": "images/card_type_americanexp.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_americanexp.png",
+        "checksum": "85659779c761130e5c739963675075be164cc48089f3991bac2f591beabca336"
+      },
+      {
+        "file_path": "images/card_type_amex.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_amex.png",
+        "checksum": "4a284703ed62e5939faee8d56c689200013d3e72415a685db06871a279e41fef"
+      },
+      {
+        "file_path": "images/card_type_cred.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_cred.png",
+        "checksum": "03bf210fc9a32e5812907ed51037e325422726c1694b10f0c034296cd97278a4"
+      },
+      {
+        "file_path": "images/card_type_dhani.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_dhani.png",
+        "checksum": "559596f8b51fc5428249cd39bc5dc3eb1db12381690b25a42a330e0c6b39f2b7"
+      },
+      {
+        "file_path": "images/card_type_diners_club_carte_blanche.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_diners_club_carte_blanche.png",
+        "checksum": "d9e897dce83a945538e0b03afba574b164c5ed53c52b9e714b9c812fcc12c976"
+      },
+      {
+        "file_path": "images/card_type_diners_club_international.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_diners_club_international.png",
+        "checksum": "9099b07efe4f9129c56d5ce41645036bd4c6442b0497509ddaf4bd251595fa80"
+      },
+      {
+        "file_path": "images/card_type_diners.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_diners.png",
+        "checksum": "48a4732d5f170a707fbdca5592ce4e1148079ea14f264b7a8c1b4e0ab05e3b1a"
+      },
+      {
+        "file_path": "images/card_type_discover.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_discover.png",
+        "checksum": "30028d1d88d1cd5c2f61e39182b5afb52f14e51f8378cce6489bde5ab9ded436"
+      },
+      {
+        "file_path": "images/card_type_jcb.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_jcb.png",
+        "checksum": "886594275d9401b0c5ba994d4dc993658a376345e136e04b42777cec102edaf5"
+      },
+      {
+        "file_path": "images/card_type_laser.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_laser.png",
+        "checksum": "7f26e18aed840fd0d85d20ffb8c9ed13e1d0b1138c75cb8bc14385c11818ee6c"
+      },
+      {
+        "file_path": "images/card_type_maestro.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_maestro.png",
+        "checksum": "417f2b3b37468c079d7c8494cb9f902f1a36ca7570e20c544ba2867c538bfc92"
+      },
+      {
+        "file_path": "images/card_type_master.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_master.png",
+        "checksum": "d5f13b6e27cafdb806c3dcd00f980efe15927d4bdbd9f313d43cd35578409944"
+      },
+      {
+        "file_path": "images/card_type_mastercard.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_mastercard.png",
+        "checksum": "f5cb8115a92ba34da4dcc53cf0d8f17d463efadc9a22d243db5a6140267eaefb"
+      },
+      {
+        "file_path": "images/card_type_rupay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_rupay.png",
+        "checksum": "f39daef76cb1a6763dede2e97426a629becd78e1f74d71c0a53c2d986ec4e696"
+      },
+      {
+        "file_path": "images/card_type_slice.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_slice.png",
+        "checksum": "c550bdbbd2d93320c3455bb8b48335ad8421d4a7f85550a0d19ff5ae1ca7baaa"
+      },
+      {
+        "file_path": "images/card_type_visa_electron.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_visa_electron.png",
+        "checksum": "e8907d3e817f6c8eca5adca69b0bc9b870c832d2fc77754b9d64b4a60231e2e0"
+      },
+      {
+        "file_path": "images/card_type_visa.png",
+        "url": "https://payments.juspay.in/hyper/images/common/card_type_visa.png",
+        "checksum": "54f4c8dcfc052e8e7aacf28a4c382ee7c72471c4e10f03799dc65a66d84e54ed"
+      },
+      {
+        "file_path": "images/center_qr_paynow_gen_qr.png",
+        "url": "https://payments.juspay.in/hyper/images/common/center_qr_paynow_gen_qr.png",
+        "checksum": "39cb12765881febc4583f2f4f2f33ae79154cea872c80c7be11ae634ddffeead"
+      },
+      {
+        "file_path": "images/checkbox.png",
+        "url": "https://payments.juspay.in/hyper/images/intent/checkbox.png",
+        "checksum": "c6da5224735bde21ee992273a788b6cc1bccb30a87330c56c5718a78cf9d76a2"
+      },
+      {
+        "file_path": "images/checkbox1.png",
+        "url": "https://payments.juspay.in/hyper/images/intent/checkbox1.png",
+        "checksum": "8177109b084628464e1ba147c042a6807707ebc01ef9f1428dfaa65655e38604"
+      },
+      {
+        "file_path": "images/checklist_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/checklist_upi.png",
+        "checksum": "bba91aa1eef2ad96bbc95b5fec2a5ed57e5baaf78a6922b2e28304879f8cbf37"
+      },
+      {
+        "file_path": "images/circular_radio_button.png",
+        "url": "https://payments.juspay.in/hyper/images/common/circular_radio_button.png",
+        "checksum": "30ba6929df714b6f5cfb2d98c04c2b578d4d609eb35d5a0eebf464bfecaf2b22"
+      },
+      {
+        "file_path": "images/cred.png",
+        "url": "https://payments.juspay.in/hyper/images/common/cred.png",
+        "checksum": "569577baf1186fbc980ec8472d8c53bab14063af00717869fa0c6345218b1f04"
+      },
+      {
+        "file_path": "images/cross.png",
+        "url": "https://payments.juspay.in/hyper/images/common/cross.png",
+        "checksum": "dfca834a35769c175cb3c692bf244c9d46f224528f28ed97480058ec6a7de60c"
+      },
+      {
+        "file_path": "images/emi_available.png",
+        "url": "https://payments.juspay.in/hyper/images/common/emi_available.png",
+        "checksum": "608123feceedc26d228b8d6c8a5668ca4d9a144c003895c8eb49c20e660fade1"
+      },
+      {
+        "file_path": "images/empty_search_state_nb.png",
+        "url": "https://payments.juspay.in/hyper/images/common/empty_search_state_nb.png",
+        "checksum": "0f50c3797911caa5d9ec2a4978385ddd85f1ee4320e151c3e84c13b3142cb52f"
+      },
+      {
+        "file_path": "images/error.png",
+        "url": "https://payments.juspay.in/hyper/images/common/error.png",
+        "checksum": "07f5f0bb0d171861f4a5aa9fe2f9de81fe921e825220a80715a8619c539908fa"
+      },
+      {
+        "file_path": "images/eye_hide_grey.png",
+        "url": "https://payments.juspay.in/hyper/images/common/eye_hide_grey.png",
+        "checksum": "31dda8e3106abb05141a49130c0fbece5585996fe79943bf637407c86135dd65"
+      },
+      {
+        "file_path": "images/eye_show_grey.png",
+        "url": "https://payments.juspay.in/hyper/images/common/eye_show_grey.png",
+        "checksum": "be9fa84dbffa7e8303eaad9418d5b92a842122bc624e026a5cc585f9d0e24938"
+      },
+      {
+        "file_path": "images/failure_red.png",
+        "url": "https://payments.juspay.in/hyper/images/common/failure_red.png",
+        "checksum": "345fcaef9ee66268e96ba71ac93bfef56a6bf139013bc4124a640e6f07033d86"
+      },
+      {
+        "file_path": "images/food_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/food_card.png",
+        "checksum": "8f008bf5dbd73f3f29223301b557010dc4745ccc6e55c9f7afcbabcfee392667"
+      },
+      {
+        "file_path": "images/google_pay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/google_pay.png",
+        "checksum": "a345f75d8e938166c50a900c25e2e10caa0cc06e02a8ac41a426a6ba918da978"
+      },
+      {
+        "file_path": "images/green_plus.png",
+        "url": "https://payments.juspay.in/hyper/images/common/green_plus.png",
+        "checksum": "69332d11f5ae9b0ce7aa49de1da05dc71ab3d971af3d0ea99a6faf3a2078906f"
+      },
+      {
+        "file_path": "images/grid_tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/grid_tick.png",
+        "checksum": "2c7395c352f4d70a6508e8b3b0c724870d6f89f563e51d602aebaf0a9f23f252"
+      },
+      {
+        "file_path": "images/hourglass.png",
+        "url": "https://payments.juspay.in/hyper/images/common/hourglass.png",
+        "checksum": "b9ae90700044a14f6e6ead8383a09760e090cd20702fd7af165a5f2d0c7d35ba"
+      },
+      {
+        "file_path": "images/ic_affirm.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_affirm.png",
+        "checksum": "e42aa4426b1f64331fbc6487945762f5aba2759245c0af840be98b7d76d7fc16"
+      },
+      {
+        "file_path": "images/ic_afterpay_clearpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_afterpay_clearpay.png",
+        "checksum": "8d834b822091b2b676351d7fcdace220f807cc34623aae1402b4ce24df7cfa3a"
+      },
+      {
+        "file_path": "images/ic_airtelmoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_airtelmoney.png",
+        "checksum": "41eafcd3cfb36ecfb3be844bbb5432a1d2cd4d4ab2141bb27e6f4b39c438769b"
+      },
+      {
+        "file_path": "images/ic_amazonpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_amazonpay.png",
+        "checksum": "d78b74876a4fb641afd46efa5cb9f4ff4bb61646d86c5bbfbe5369187bf3837a"
+      },
+      {
+        "file_path": "images/ic_amexezeclick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_amexezeclick.png",
+        "checksum": "66d1931d4ecec53817bed93cbf6783735b1445ec748f8f49d32a9b2ffe15f504"
+      },
+      {
+        "file_path": "images/ic_atomepaylater.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_atomepaylater.png",
+        "checksum": "359aa18599225435e5eaee477f192afa379cd08da08e99db43d580ebdc296f1f"
+      },
+      {
+        "file_path": "images/ic_back_arrow.png",
+        "url": "https://payments.juspay.in/hyper/images/intent/ic_back_arrow.png",
+        "checksum": "c8ee2cc5c00541d2afb9f9325b9341a9b52ee0d0bce46529ac4ee304ba6c99fd"
+      },
+      {
+        "file_path": "images/ic_bajaj_clemi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bajaj_clemi.png",
+        "checksum": "a0ad2e4d70344065428c227c0d0090e747e488eeaaa96e4242ae40e5e2c66de1"
+      },
+      {
+        "file_path": "images/ic_bajajpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bajajpay.png",
+        "checksum": "a0ad2e4d70344065428c227c0d0090e747e488eeaaa96e4242ae40e5e2c66de1"
+      },
+      {
+        "file_path": "images/ic_bank_0999.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_0999.png",
+        "checksum": "bfac0cba1d2f19e03af845a0df4d900e709a266e4b6957bd90de64c97ae72314"
+      },
+      {
+        "file_path": "images/ic_bank_113652.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_113652.png",
+        "checksum": "9816d1d428561eaa0ddb7e52469f3f31dacbb288a65d7a4f28f34ac52cef27f3"
+      },
+      {
+        "file_path": "images/ic_bank_142094.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_142094.png",
+        "checksum": "41ae79477267d7daff16c9623b66ff310d298881b0345629ed0f6253621dfd80"
+      },
+      {
+        "file_path": "images/ic_bank_143442.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_143442.png",
+        "checksum": "2de6c63e7401560d8ea83a850fb9b3e1f97d28af7e0c51c87c715e92903ee2e2"
+      },
+      {
+        "file_path": "images/ic_bank_193025.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_193025.png",
+        "checksum": "a99674968ba0e96680f33f6501b33c750bb9e85e162c70931a42a52bb51ecd34"
+      },
+      {
+        "file_path": "images/ic_bank_199641.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_199641.png",
+        "checksum": "601accab8ca45b2f0f1119251066593b694b9be7f8917d7b042f8d8d827a6ef6"
+      },
+      {
+        "file_path": "images/ic_bank_221122.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_221122.png",
+        "checksum": "3ae495d3c3e6b528a6b6681ca0a3d1ad7dcb0fa10a6f2bdcaf98237dd4c0c673"
+      },
+      {
+        "file_path": "images/ic_bank_223311.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_223311.png",
+        "checksum": "593e7122885bb64783e0c527140f7882f46834d5ca4987b9243096aa21c7947e"
+      },
+      {
+        "file_path": "images/ic_bank_223312.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_223312.png",
+        "checksum": "a8ec346767d52a4303bada9c48c16fbf8befd7af5e0adf58157cd9d4f40f607f"
+      },
+      {
+        "file_path": "images/ic_bank_223322.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_223322.png",
+        "checksum": "6d66e115a173d29f7cdca9e4e0bd1441000042d4623f2edc43eef7202297b583"
+      },
+      {
+        "file_path": "images/ic_bank_259789.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_259789.png",
+        "checksum": "29417765853752080ed506ceacff8ca5bd1b032e2c2658ee11ec792694874cb7"
+      },
+      {
+        "file_path": "images/ic_bank_261929.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_261929.png",
+        "checksum": "246512d4a31806094967d0bfa6da5b11356bb63358caf2f4393dfd6e937bd544"
+      },
+      {
+        "file_path": "images/ic_bank_326666.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_326666.png",
+        "checksum": "83723ab1324556049ed544d84ce98423e3e7a9f18c9e24789a82d5117eff8a5e"
+      },
+      {
+        "file_path": "images/ic_bank_354262.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_354262.png",
+        "checksum": "9a9302f8ae7697aa6b42350e49ae8340325972715b93769f360868f5375a432c"
+      },
+      {
+        "file_path": "images/ic_bank_411122.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_411122.png",
+        "checksum": "f1d915bbb43a2e995ff7420acc48a800a5bbbbfdf99434248cf985024f41cd97"
+      },
+      {
+        "file_path": "images/ic_bank_416572.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_416572.png",
+        "checksum": "113bd071875df64427a8ad0140f8837de4d7ad6bd9d4e8edde7a1ed870e24e0b"
+      },
+      {
+        "file_path": "images/ic_bank_431870.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_431870.png",
+        "checksum": "68f131b74918a593989113fc9a7a8aa4b6b2c6a560efeb7a9f29d044fb2ff7da"
+      },
+      {
+        "file_path": "images/ic_bank_436360.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_436360.png",
+        "checksum": "3f7c4a7688d4833e91e72a9bfab353a248b7a322a3e94ac8ba5ecc3ad3047c60"
+      },
+      {
+        "file_path": "images/ic_bank_441671.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_441671.png",
+        "checksum": "03f4c4b56d6c0083b0ea7d0d11d3e4c96197dcd5c2d851f2731b63103c20f921"
+      },
+      {
+        "file_path": "images/ic_bank_442212.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_442212.png",
+        "checksum": "7d68be99749032889e9f47342c531b8250ad8d4e78d2fe650cb7fa3b8fd06e56"
+      },
+      {
+        "file_path": "images/ic_bank_455012.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_455012.png",
+        "checksum": "8e467a2d5ac278934c7316fcbc0c0bb8a7082d0fbd67ef76427f1c3e3aa62712"
+      },
+      {
+        "file_path": "images/ic_bank_468233.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_468233.png",
+        "checksum": "7e8ac0f99c4792681b5d2aa76f51ee0f31e22d3dab633fe50b3cf6f173cd23cf"
+      },
+      {
+        "file_path": "images/ic_bank_484441.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_484441.png",
+        "checksum": "c550bdbbd2d93320c3455bb8b48335ad8421d4a7f85550a0d19ff5ae1ca7baaa"
+      },
+      {
+        "file_path": "images/ic_bank_493541.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_493541.png",
+        "checksum": "6366fe9884c50c2021713009c2f04d6ea745d8a49c35983bc75e1231c5b73207"
+      },
+      {
+        "file_path": "images/ic_bank_500001.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_500001.png",
+        "checksum": "3b09500d8ddd96562a671201401ad776d8ca73cd83d0c08c03bfe3fdc54b0423"
+      },
+      {
+        "file_path": "images/ic_bank_500002.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_500002.png",
+        "checksum": "2c31ead9a30b37dd4fa2d806161bcee7e356df882905797cd39c9ec92c57010c"
+      },
+      {
+        "file_path": "images/ic_bank_500003.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_500003.png",
+        "checksum": "f812fa4ff4457ea2a1341cf387b1e29edf3fa306cdcf24c3a6b6f2fbc601d39c"
+      },
+      {
+        "file_path": "images/ic_bank_500004.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_500004.png",
+        "checksum": "42725561b4c9e5ccdb291fc33f730b5811e3e8c601e81df46bf12ad8f4d006d2"
+      },
+      {
+        "file_path": "images/ic_bank_500005.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_500005.png",
+        "checksum": "3b09500d8ddd96562a671201401ad776d8ca73cd83d0c08c03bfe3fdc54b0423"
+      },
+      {
+        "file_path": "images/ic_bank_500007.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_500007.png",
+        "checksum": "2c31ead9a30b37dd4fa2d806161bcee7e356df882905797cd39c9ec92c57010c"
+      },
+      {
+        "file_path": "images/ic_bank_506286.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_506286.png",
+        "checksum": "72066d03d5a5de2fd2dbeefd9c773a3026d022d4f45443d18b264cea9337fae1"
+      },
+      {
+        "file_path": "images/ic_bank_508500.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508500.png",
+        "checksum": "aa850412bcd2cb0c66d536f7141592427a37e7752a351a8efb3f50aec839e834"
+      },
+      {
+        "file_path": "images/ic_bank_508505.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508505.png",
+        "checksum": "55f5f21919ed2f85caf021099526f7e5a4587c5cd6b94d482b36a100f015d348"
+      },
+      {
+        "file_path": "images/ic_bank_508507.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508507.png",
+        "checksum": "e2d8bdf5832cae3ca0bede6def8510077e20c1f62532f30b49c8643e4b23f3ab"
+      },
+      {
+        "file_path": "images/ic_bank_508508.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508508.png",
+        "checksum": "75db27f243b38782c174c78ae4b822155dcca3e7fb32a977f361b16eef6062f3"
+      },
+      {
+        "file_path": "images/ic_bank_508512.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508512.png",
+        "checksum": "cd78513bd2209814a1c55c4eb959e099a9cfb1e2910879dd2d52d95f6f00dfba"
+      },
+      {
+        "file_path": "images/ic_bank_508517.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508517.png",
+        "checksum": "bc41f918592f5d9b686418413a4448e2c1bcbcdbdb201e4610bad633abec737a"
+      },
+      {
+        "file_path": "images/ic_bank_508532.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508532.png",
+        "checksum": "351522531328677282c81767854b22ac75017c68f4999a5c51e11a8f39acd06c"
+      },
+      {
+        "file_path": "images/ic_bank_508534.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508534.png",
+        "checksum": "c9e9edc9ae3a2698522595bd1efd2723d1407d6790c7c7897372f3be0c37d941"
+      },
+      {
+        "file_path": "images/ic_bank_508541.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508541.png",
+        "checksum": "a53202911c0485e6306a2406664289826af4cc3961f23c496c9abaa4fbd3f9f7"
+      },
+      {
+        "file_path": "images/ic_bank_508547.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508547.png",
+        "checksum": "3072fba39f1873a332281e4d3552ea28567c056cba7112ecca1d2b0af45bc799"
+      },
+      {
+        "file_path": "images/ic_bank_508548.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508548.png",
+        "checksum": "33402480a379d014266f9025bb0e6b59521bcf498e72dccf31ebdd3a2f4aa5bf"
+      },
+      {
+        "file_path": "images/ic_bank_508568.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508568.png",
+        "checksum": "f812fa4ff4457ea2a1341cf387b1e29edf3fa306cdcf24c3a6b6f2fbc601d39c"
+      },
+      {
+        "file_path": "images/ic_bank_508585.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508585.png",
+        "checksum": "45364c18d5e59cdb80b16fe5a65a92be41f665fa465f1f9d686fefb4f4ccad29"
+      },
+      {
+        "file_path": "images/ic_bank_508753.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508753.png",
+        "checksum": "f9b88b71a6e90aad74fc76ebcd7aaa2ccc8e52fdc7bf400c52ec08c34b3b15f5"
+      },
+      {
+        "file_path": "images/ic_bank_508794.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508794.png",
+        "checksum": "9138335dbfff1e916cc221b3e9560c64c0fb3e0a7335cfd35ce85b16ef7f7d9e"
+      },
+      {
+        "file_path": "images/ic_bank_508991.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508991.png",
+        "checksum": "d075cc04fefe7f49055fa1e95b37210f3cc32ed08b499735358e5c7cb9f63860"
+      },
+      {
+        "file_path": "images/ic_bank_508998.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_508998.png",
+        "checksum": "e4c6623e13ba2e967e1e752e8203135670464918284aa40177d97e2391e0d93d"
+      },
+      {
+        "file_path": "images/ic_bank_511308.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_511308.png",
+        "checksum": "5070ee94903432705d57951151158a0bbdf31c21fc40e9abc213484af4682ade"
+      },
+      {
+        "file_path": "images/ic_bank_515948.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_515948.png",
+        "checksum": "45364c18d5e59cdb80b16fe5a65a92be41f665fa465f1f9d686fefb4f4ccad29"
+      },
+      {
+        "file_path": "images/ic_bank_525847.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_525847.png",
+        "checksum": "52085eb9d4619be457fed4c8c98badc1cd5391c7ad97cf16df8e39c0598d764a"
+      },
+      {
+        "file_path": "images/ic_bank_528293.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_528293.png",
+        "checksum": "e89a0927c0eaebaab5f4f93a6943dbc48453989bfe6979179ed14a2f06006dc5"
+      },
+      {
+        "file_path": "images/ic_bank_548748.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_548748.png",
+        "checksum": "1eca8b4ab6b94575f90251ffc030848d1b001b663ac6d2ffd951f7c89318c3c3"
+      },
+      {
+        "file_path": "images/ic_bank_606060.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_606060.png",
+        "checksum": "8015d99ab8e853a4a8c24f774701caae794c2487782f6a993f3e757693cd107a"
+      },
+      {
+        "file_path": "images/ic_bank_606985.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_606985.png",
+        "checksum": "a62eec3a1c67a361a5d4a70bbb6524c80f6d22406663991d778bf827f847e9be"
+      },
+      {
+        "file_path": "images/ic_bank_606993.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_606993.png",
+        "checksum": "a42506011adaaa9197d09771a0e9dab697f191dbc12f2c276d0000dae0cdf984"
+      },
+      {
+        "file_path": "images/ic_bank_606995.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_606995.png",
+        "checksum": "8f40fb242b8d48aea6777046734316c46109ca9119f178d9e77de47cdeadfc8e"
+      },
+      {
+        "file_path": "images/ic_bank_607000.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607000.png",
+        "checksum": "51e6fd3d7fb3c01866ad1120e66a6843aa28ed22c2f704bdbb1558a4c0e2b920"
+      },
+      {
+        "file_path": "images/ic_bank_607028.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607028.png",
+        "checksum": "242a830ef0277ec9b60e631f6a0fb5f89bf34141c6e254b6d74edd9804422f0d"
+      },
+      {
+        "file_path": "images/ic_bank_607051.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607051.png",
+        "checksum": "8f621bdd74e8209c5c9793b0ea00134fdb709e0e06094d8bc437fa4c4b256535"
+      },
+      {
+        "file_path": "images/ic_bank_607055.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607055.png",
+        "checksum": "e8651514ed090463e727606b4bb775c3f7c26cf5810196bb936bcf5c7f95cfab"
+      },
+      {
+        "file_path": "images/ic_bank_607057.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607057.png",
+        "checksum": "d09e7c899199788668426fac36035a6b15993bdc5b628f62f9426c3318f104c7"
+      },
+      {
+        "file_path": "images/ic_bank_607058.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607058.png",
+        "checksum": "8c98741c972384300095163dcdb0b4128c1380bca503558a7263fb008b4ce2a8"
+      },
+      {
+        "file_path": "images/ic_bank_607062.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607062.png",
+        "checksum": "c3e34523e4504da345b536c4f062f33ec1ecfb398cb4f968461b54f192b28271"
+      },
+      {
+        "file_path": "images/ic_bank_607064.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607064.png",
+        "checksum": "ebe489ff83090eaad0d60691a51b52f46e093477fc221effbe8399095dbe7f72"
+      },
+      {
+        "file_path": "images/ic_bank_607065.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607065.png",
+        "checksum": "e1a4c258f5b34385aa0744a3beaa5748456b0c1f15a92a516958dcd57f68e698"
+      },
+      {
+        "file_path": "images/ic_bank_607066.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607066.png",
+        "checksum": "e7f8d18edec794c724918f9974e726dd29674d68041f35316c11b116f0c44f99"
+      },
+      {
+        "file_path": "images/ic_bank_607075.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607075.png",
+        "checksum": "41a3ef8f2dbc5a881f0836970ed71c51b4d0ac94e139191d3efe30df8feb7bf4"
+      },
+      {
+        "file_path": "images/ic_bank_607080.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607080.png",
+        "checksum": "7af77bad8cf5dae06047fe9e43166040eada88e3918dee379a56015310049144"
+      },
+      {
+        "file_path": "images/ic_bank_607084.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607084.png",
+        "checksum": "bc41f918592f5d9b686418413a4448e2c1bcbcdbdb201e4610bad633abec737a"
+      },
+      {
+        "file_path": "images/ic_bank_607087.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607087.png",
+        "checksum": "6ae12089c5448964733ceb67dce30c2e41beabbbda5b3681768995208ddeb0d1"
+      },
+      {
+        "file_path": "images/ic_bank_607090.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607090.png",
+        "checksum": "8877ca1af1c29a23c69d8ec134ba5b85e3f2201395ce1efce1629692e3b55f0e"
+      },
+      {
+        "file_path": "images/ic_bank_607091.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607091.png",
+        "checksum": "0464bc2dbd41aa619d4152c85f1b7e29190d1529666d0f12ba415277c0327e67"
+      },
+      {
+        "file_path": "images/ic_bank_607095.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607095.png",
+        "checksum": "e9ed0c55b0585e845dc072ce7cdf5853a6ecf93d8756f2612a0fe042075e1412"
+      },
+      {
+        "file_path": "images/ic_bank_607099.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607099.png",
+        "checksum": "59af441ad1d583ec38d542de7ef18b2dc020a5810c783862ae69114d9f0b38a0"
+      },
+      {
+        "file_path": "images/ic_bank_607100.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607100.png",
+        "checksum": "523106d2f4e9ee759a334af7e350df8bf98eb3d1e21fe5dec8334ec35d9b881a"
+      },
+      {
+        "file_path": "images/ic_bank_607101.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607101.png",
+        "checksum": "bb06db989331fbf2a9e507720931f5249c36d8f6d5f165fff77e5efa53c4fd9d"
+      },
+      {
+        "file_path": "images/ic_bank_607104.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607104.png",
+        "checksum": "52085eb9d4619be457fed4c8c98badc1cd5391c7ad97cf16df8e39c0598d764a"
+      },
+      {
+        "file_path": "images/ic_bank_607105.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607105.png",
+        "checksum": "1abdae26012189664f6b63ee976ae4ac83b86b87ced46859c17b144d7c696dbd"
+      },
+      {
+        "file_path": "images/ic_bank_607115.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607115.png",
+        "checksum": "3c18c07be1d9768c57a4b46b862f79a03dac0fe78b0200946c914389b43c4941"
+      },
+      {
+        "file_path": "images/ic_bank_607117.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607117.png",
+        "checksum": "709851d3eda4878b7915f5974ebdceddc0e019113301fc224c7964dd628dd72a"
+      },
+      {
+        "file_path": "images/ic_bank_607121.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607121.png",
+        "checksum": "3c26401fb4a3f9e35625bb541113f5930497fc463b15dad599c35af4cae492f9"
+      },
+      {
+        "file_path": "images/ic_bank_607122.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607122.png",
+        "checksum": "9816d1d428561eaa0ddb7e52469f3f31dacbb288a65d7a4f28f34ac52cef27f3"
+      },
+      {
+        "file_path": "images/ic_bank_607124.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607124.png",
+        "checksum": "a0f57d854928b03c8160d90598791028780d61829eb56b867afcc6845be8cf82"
+      },
+      {
+        "file_path": "images/ic_bank_607126.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607126.png",
+        "checksum": "a53202911c0485e6306a2406664289826af4cc3961f23c496c9abaa4fbd3f9f7"
+      },
+      {
+        "file_path": "images/ic_bank_607130.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607130.png",
+        "checksum": "68f131b74918a593989113fc9a7a8aa4b6b2c6a560efeb7a9f29d044fb2ff7da"
+      },
+      {
+        "file_path": "images/ic_bank_607131.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607131.png",
+        "checksum": "5ef97a8de5589de2cc18d303a38369b04735b1e6a4f4f8faef807a52e4366b6c"
+      },
+      {
+        "file_path": "images/ic_bank_607152.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607152.png",
+        "checksum": "51a49dc74741e75aeb4f43799c0ea95342115cff82a45ac5a42c4ef2b49ef046"
+      },
+      {
+        "file_path": "images/ic_bank_607153.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607153.png",
+        "checksum": "7aa47e47800845c0275630bc6b98758d9767a72fccd10c0598c9fb9ab20e3a8c"
+      },
+      {
+        "file_path": "images/ic_bank_607158.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607158.png",
+        "checksum": "72066d03d5a5de2fd2dbeefd9c773a3026d022d4f45443d18b264cea9337fae1"
+      },
+      {
+        "file_path": "images/ic_bank_607165.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607165.png",
+        "checksum": "f08e5ee885f4c1a5e0c8fa03312bf3a1491e900cf810bae48aef2b1879fc3f11"
+      },
+      {
+        "file_path": "images/ic_bank_607167.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607167.png",
+        "checksum": "58c1bc503ee29fab5b9c91bb4ce8878c05b58079909160f5c3fa477107476efc"
+      },
+      {
+        "file_path": "images/ic_bank_607170.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607170.png",
+        "checksum": "b981a491f0faee2274441d8b3d4c5d2e94651c216fc3cdd3d03f5c04652103ee"
+      },
+      {
+        "file_path": "images/ic_bank_607184.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607184.png",
+        "checksum": "2a0a8840065af474c676d82001f50200692b230ac790bbcf52a8be0289d92c95"
+      },
+      {
+        "file_path": "images/ic_bank_607187.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607187.png",
+        "checksum": "ceac8e4bf0bc2e1cd929931d82d4f4c833681185d3a9987c0e9033e16fba80c6"
+      },
+      {
+        "file_path": "images/ic_bank_607189.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607189.png",
+        "checksum": "beeb31038d8f7b8a55d6c4b56aa1531ea0ffc7a334c1b9e22e89e9bbde7d82c2"
+      },
+      {
+        "file_path": "images/ic_bank_607195.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607195.png",
+        "checksum": "16a004efc4f2f03f98d67d4595af5d0c4898dbcf7afa01a43d55cf1b2635911c"
+      },
+      {
+        "file_path": "images/ic_bank_607197.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607197.png",
+        "checksum": "d376e68abc89afe816490e0a60a158a329be77e36e78f486f9dce373c3cba610"
+      },
+      {
+        "file_path": "images/ic_bank_607198.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607198.png",
+        "checksum": "754ff63b77081717dcdba350a2669ec1e774802177fdce945de45d12acfe01ca"
+      },
+      {
+        "file_path": "images/ic_bank_607200.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607200.png",
+        "checksum": "e3497fd4f77d1d7868f497d96eb4c2781a3984d537ee2bb98f0e06553569443f"
+      },
+      {
+        "file_path": "images/ic_bank_607202.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607202.png",
+        "checksum": "e42eb719955541fee0c1bbbe0333f3f047c134a4c2201f945acae3f2d760aaf2"
+      },
+      {
+        "file_path": "images/ic_bank_607206.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607206.png",
+        "checksum": "08c5626af70504fdf1f5a0842afbec1052d009d2f23b354acc6bafb2f0d8a01a"
+      },
+      {
+        "file_path": "images/ic_bank_607210.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607210.png",
+        "checksum": "e7d304f09f2420dd69cd47877c146e2865455ad28a964e706a61351ebe0cabc3"
+      },
+      {
+        "file_path": "images/ic_bank_607212.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607212.png",
+        "checksum": "c0355b45542822b7b92b5097ec0bc870125ec478522164ed5dde03a1ee046d85"
+      },
+      {
+        "file_path": "images/ic_bank_607214.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607214.png",
+        "checksum": "0c0cd65e68a130f863ea79d9677cdada20e50dbc777281e08b02eefa4ccaee2a"
+      },
+      {
+        "file_path": "images/ic_bank_607222.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607222.png",
+        "checksum": "1aef50d0cd3a81aad29584ef89b3ef4ccd3041813ed4a2c23669a93cbdeca9d0"
+      },
+      {
+        "file_path": "images/ic_bank_607223.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607223.png",
+        "checksum": "3c08d87baca3155ae92b55dff3b836b155126f8f1e9be5331ccbf3e37c9853fc"
+      },
+      {
+        "file_path": "images/ic_bank_607230.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607230.png",
+        "checksum": "203738e5dd79f11ec2e0a241135672fdaa931a3dcb69c63cabf60cd2339eba20"
+      },
+      {
+        "file_path": "images/ic_bank_607241.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607241.png",
+        "checksum": "94a83d84b728ef76f4582e415c2e143fcf8d530a310cfbb9f640deb8afdc5b74"
+      },
+      {
+        "file_path": "images/ic_bank_607249.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607249.png",
+        "checksum": "3b53b8712c0f5ce1300dcddf0f1fef8db2a4368261538f1f0233895e089e768a"
+      },
+      {
+        "file_path": "images/ic_bank_607258.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607258.png",
+        "checksum": "2c31ead9a30b37dd4fa2d806161bcee7e356df882905797cd39c9ec92c57010c"
+      },
+      {
+        "file_path": "images/ic_bank_607261.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607261.png",
+        "checksum": "e9b8b57bf87c1db665573be340a9d5209eb61286162993f2ed7d70272f220f4b"
+      },
+      {
+        "file_path": "images/ic_bank_607270.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607270.png",
+        "checksum": "24d82984d5b06744b862a555e5f2310aec3a3f79ba57923aed0102ec638e90a5"
+      },
+      {
+        "file_path": "images/ic_bank_607273.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607273.png",
+        "checksum": "c49559ad3b770769bfb0ea903653d5907c2ca5e8cb89d3b3d8263fce61264440"
+      },
+      {
+        "file_path": "images/ic_bank_607276.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607276.png",
+        "checksum": "27dcc6974d04e6c795e5ad0a4a3520f6d2e103429f8c15d6739c34374d09ab69"
+      },
+      {
+        "file_path": "images/ic_bank_607280.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607280.png",
+        "checksum": "c4051be79938c2bd82b9be19eb8a357cf4bd0d5690c2f6a2e56efad5b04fd77a"
+      },
+      {
+        "file_path": "images/ic_bank_607290.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607290.png",
+        "checksum": "57664d80c1a91ae0f220063cc8c178d58ec4752ec6c1222841ddd5e20ba2105e"
+      },
+      {
+        "file_path": "images/ic_bank_607291.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607291.png",
+        "checksum": "1d26555d7630d0ebe994ee5c9d8536a21f69688496a78e5ad918a1f6f78e1e63"
+      },
+      {
+        "file_path": "images/ic_bank_607308.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607308.png",
+        "checksum": "f03ce9d29ebb1c28be70ef87bc1c0157636e4de11948b5e3d5a7a540568dcd63"
+      },
+      {
+        "file_path": "images/ic_bank_607320.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607320.png",
+        "checksum": "940349786e01afdc66364d22632f017a921d74bc9d32317c580d5b90c23e0932"
+      },
+      {
+        "file_path": "images/ic_bank_607324.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607324.png",
+        "checksum": "baf66313cb4a96500568001e6c0ae716ee6fab01f98f904baca98c05408b26a9"
+      },
+      {
+        "file_path": "images/ic_bank_607339.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607339.png",
+        "checksum": "0f97ec74a765a40c6ac7ad5830c78c8092f02549c43196d59f96b64dc9639bc2"
+      },
+      {
+        "file_path": "images/ic_bank_607354.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607354.png",
+        "checksum": "fc30d75e6f588184cffe0c701c6fb000a843eb6ccb97d8633dd9d5fa84edc526"
+      },
+      {
+        "file_path": "images/ic_bank_607363.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607363.png",
+        "checksum": "6a0f475b44c5429a5118f939cc46fa8933047381d412179040f6e6cf3712609d"
+      },
+      {
+        "file_path": "images/ic_bank_607377.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607377.png",
+        "checksum": "75024c1323885acb4a55f956d43f8ee23d613b8bfa121281ce866cc2d8c596d6"
+      },
+      {
+        "file_path": "images/ic_bank_607387.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607387.png",
+        "checksum": "ad09ae897aea8bac6e24fd2f295d6213bdd80ece5b98c2993dbe4147987dc48a"
+      },
+      {
+        "file_path": "images/ic_bank_607389.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607389.png",
+        "checksum": "71900ff8199603abdca44dd2a632eec6ad83b38ae0873a565fdcbf0f922f3551"
+      },
+      {
+        "file_path": "images/ic_bank_607393.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607393.png",
+        "checksum": "f5d8799515f59e9a60e9e73ba0c930e7f75ee8d18b665e6a310c982e64bbd475"
+      },
+      {
+        "file_path": "images/ic_bank_607394.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607394.png",
+        "checksum": "5070ee94903432705d57951151158a0bbdf31c21fc40e9abc213484af4682ade"
+      },
+      {
+        "file_path": "images/ic_bank_607395.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607395.png",
+        "checksum": "1c7e655f7fab9bb42680796eab54c811431377c11a557611608156358e1f77ec"
+      },
+      {
+        "file_path": "images/ic_bank_607420.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607420.png",
+        "checksum": "6d93368b49f91cab5300cb39d28a9c5628365986c9438ee5006023039a1c2526"
+      },
+      {
+        "file_path": "images/ic_bank_607440.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607440.png",
+        "checksum": "c336e3e442956ff7b1e3fe7f4e1052647ae63cf68bd82a0b0fb79b1936d75937"
+      },
+      {
+        "file_path": "images/ic_bank_607442.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607442.png",
+        "checksum": "3509ff8e11398dc254a80f64ae79fcd8cafb2263c7837917bc50cc908ce282a3"
+      },
+      {
+        "file_path": "images/ic_bank_607476.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607476.png",
+        "checksum": "128b59d9dab2b483a65367556fde26873e44defb6e33332c10ac35de3620f8c0"
+      },
+      {
+        "file_path": "images/ic_bank_607485.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607485.png",
+        "checksum": "7f4407a511bea2a21c10b93bdd4c64050995eefb9e9e72b686c98952edbae8ff"
+      },
+      {
+        "file_path": "images/ic_bank_607506.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607506.png",
+        "checksum": "412352b7ef855b8bfccd42304af9baef3c7b00af86db90822ad4961a5e2d60ca"
+      },
+      {
+        "file_path": "images/ic_bank_607509.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607509.png",
+        "checksum": "aaf68fe4aea329908658e999d094d665168ca06955eb2d749f919fc95206f470"
+      },
+      {
+        "file_path": "images/ic_bank_607544.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607544.png",
+        "checksum": "6dd96112dee13a48030ee0aedc8fe9af8ffe72f3252f68b827bf64f8e58c481f"
+      },
+      {
+        "file_path": "images/ic_bank_607592.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607592.png",
+        "checksum": "a159f7bd6d47436e105775ff86180bfb35d6a07b281a4f1a989308026b78e029"
+      },
+      {
+        "file_path": "images/ic_bank_607621.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607621.png",
+        "checksum": "7b09e08e97e0ec6331548744d50a1f465612d90da521834f217fc53da639c569"
+      },
+      {
+        "file_path": "images/ic_bank_607689.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607689.png",
+        "checksum": "d0e2af374a9b2ea27c769d9072a0e94af9e70dc4dfa1ae0dc2e1478e38662ed2"
+      },
+      {
+        "file_path": "images/ic_bank_608001.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_608001.png",
+        "checksum": "67cf4fcde2762b430b35f0f21c089514bec6d264ad0fa3e1ff325e34bb1104fd"
+      },
+      {
+        "file_path": "images/ic_bank_608032.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_608032.png",
+        "checksum": "12567f9fd648a186c1795c66c72c6817807831fb8dfc420f1e86f26fbbb7d753"
+      },
+      {
+        "file_path": "images/ic_bank_608088.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_608088.png",
+        "checksum": "113bd071875df64427a8ad0140f8837de4d7ad6bd9d4e8edde7a1ed870e24e0b"
+      },
+      {
+        "file_path": "images/ic_bank_608117.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_608117.png",
+        "checksum": "69602dd0cfee58ad2243cb8a5d869100664dc66598241e8efc5e94188ca50bb6"
+      },
+      {
+        "file_path": "images/ic_bank_612345.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_612345.png",
+        "checksum": "03f4c4b56d6c0083b0ea7d0d11d3e4c96197dcd5c2d851f2731b63103c20f921"
+      },
+      {
+        "file_path": "images/ic_bank_612346.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_612346.png",
+        "checksum": "fbff88b8d185da35b9630c7fa22c08ebc87f81c5886f0b376633dd4c79d7d6c7"
+      },
+      {
+        "file_path": "images/ic_bank_612356.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_612356.png",
+        "checksum": "f812fa4ff4457ea2a1341cf387b1e29edf3fa306cdcf24c3a6b6f2fbc601d39c"
+      },
+      {
+        "file_path": "images/ic_bank_616197.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_616197.png",
+        "checksum": "48a27bfe8c7a814b47a81c9d8702eb95881898609741e5e128ec212e93a22dba"
+      },
+      {
+        "file_path": "images/ic_bank_632663.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_632663.png",
+        "checksum": "3c26401fb4a3f9e35625bb541113f5930497fc463b15dad599c35af4cae492f9"
+      },
+      {
+        "file_path": "images/ic_bank_650397.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_650397.png",
+        "checksum": "412352b7ef855b8bfccd42304af9baef3c7b00af86db90822ad4961a5e2d60ca"
+      },
+      {
+        "file_path": "images/ic_bank_652150.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_652150.png",
+        "checksum": "3b09500d8ddd96562a671201401ad776d8ca73cd83d0c08c03bfe3fdc54b0423"
+      },
+      {
+        "file_path": "images/ic_bank_652194.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_652194.png",
+        "checksum": "2c31ead9a30b37dd4fa2d806161bcee7e356df882905797cd39c9ec92c57010c"
+      },
+      {
+        "file_path": "images/ic_bank_672266.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_672266.png",
+        "checksum": "bc41f918592f5d9b686418413a4448e2c1bcbcdbdb201e4610bad633abec737a"
+      },
+      {
+        "file_path": "images/ic_bank_707657.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_707657.png",
+        "checksum": "5651519598341a417d16ed764a2be9a42155b2fef00122784a3c59dc62599f64"
+      },
+      {
+        "file_path": "images/ic_bank_7123456.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_7123456.png",
+        "checksum": "bd06c99ce7adb31c59ce2f36b04c94cf7cb9b1fd8a424876772381fc831ff982"
+      },
+      {
+        "file_path": "images/ic_bank_745497.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_745497.png",
+        "checksum": "d75333446b8a82c9e13782a7719438e6c9091a545dac424250f1ee542bb28a8f"
+      },
+      {
+        "file_path": "images/ic_bank_8123456.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_8123456.png",
+        "checksum": "46beb08d8227325017d8ede244dde9a3f39843e65b04a876428df031c9719ca0"
+      },
+      {
+        "file_path": "images/ic_bank_838890.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_838890.png",
+        "checksum": "2a97e63b1ec2647b43c906db8a48ee8f022ee7fd0e71e5aa2b6eb9e61929c836"
+      },
+      {
+        "file_path": "images/ic_bank_859140.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_859140.png",
+        "checksum": "7854eab6b24896f5d9cd9db170eaba34423089a07dd04dedca44184914d10621"
+      },
+      {
+        "file_path": "images/ic_bank_952542.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_952542.png",
+        "checksum": "0b7330d32471a13617ef045a1f797959adff9a0af98406b45ca86a95b54d4165"
+      },
+      {
+        "file_path": "images/ic_bank_990288.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_990288.png",
+        "checksum": "41eafcd3cfb36ecfb3be844bbb5432a1d2cd4d4ab2141bb27e6f4b39c438769b"
+      },
+      {
+        "file_path": "images/ic_bank_999999.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_999999.png",
+        "checksum": "42725561b4c9e5ccdb291fc33f730b5811e3e8c601e81df46bf12ad8f4d006d2"
+      },
+      {
+        "file_path": "images/ic_bank_aditya.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_aditya.png",
+        "checksum": "3465f05e506195d04a6a2b07310652b8768d8b234f6e7ee659e88b083d588cd0"
+      },
+      {
+        "file_path": "images/ic_bank_default.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bank_default.png",
+        "checksum": "c578158060eb5ca4174d85452152206190b20ce51f924a18099ea1d757cb8a7b"
+      },
+      {
+        "file_path": "images/ic_bhim.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_bhim.png",
+        "checksum": "75eef43830ba6578ee6cd9e6220bdfb709d7a5b50154b13f3d5b5f532ed7e7a7"
+      },
+      {
+        "file_path": "images/ic_blik.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_blik.png",
+        "checksum": "ea32173b3391b99a004a4b6b835df3975a06766b207d8642961bf0a3885a1d2f"
+      },
+      {
+        "file_path": "images/ic_capitalfloat.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_capitalfloat.png",
+        "checksum": "9d5d1ff3c5b5860be4f7d7d138d2b636950d03c868020453f61f724858d215aa"
+      },
+      {
+        "file_path": "images/ic_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_card.png",
+        "checksum": "2c4c077adcedeecd335fea23b911644e68bcbd0b647e784aa37063153188329f"
+      },
+      {
+        "file_path": "images/ic_cardod.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_cardod.png",
+        "checksum": "e17d5e0c6ded5eaa57189c36745cd5b2d3f424669c496d270c0c6e31bebccc66"
+      },
+      {
+        "file_path": "images/ic_cod.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_cod.png",
+        "checksum": "cddafbd0c510da9b8b6531dd665be4ec3f2947d581cb7f12c6ec00fecd3bb5c3"
+      },
+      {
+        "file_path": "images/ic_coupon_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_coupon_logo.png",
+        "checksum": "08c2b6083205dd04059e1191e844e1577cf7105ecf35c4e6ca1a7bded11db3e7"
+      },
+      {
+        "file_path": "images/ic_cred_offer_banner_cashback.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_cred_offer_banner_cashback.png",
+        "checksum": "2a701e164c906a3775765fa6a5e295ed21cb26bba069a674ebad46ecb323b253"
+      },
+      {
+        "file_path": "images/ic_cred.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_cred.png",
+        "checksum": "569577baf1186fbc980ec8472d8c53bab14063af00717869fa0c6345218b1f04"
+      },
+      {
+        "file_path": "images/ic_cross.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_cross.png",
+        "checksum": "51c814d34f29824a46311f47d682a7644e6dda8cf90eb23caad2c36045a90aea"
+      },
+      {
+        "file_path": "images/ic_disable.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_disable.png",
+        "checksum": "baa3dce56d96314768c52f8ae3600681d7def4ebb811cd67a8ded37d51730c83"
+      },
+      {
+        "file_path": "images/ic_emi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_emi.png",
+        "checksum": "2b6794dfd35cf83a080a164c371c7b23b9a1664e07b0e979b1ededb88db0cb98"
+      },
+      {
+        "file_path": "images/ic_epaylater.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_epaylater.png",
+        "checksum": "1c877f656c7c01eeb4328b6157808a411d47463dbf314ff4f91bfc64ae16964e"
+      },
+      {
+        "file_path": "images/ic_error_outline.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_error_outline.png",
+        "checksum": "035b89fc96845cafd0914f63c1c95267e191dd3b46cec7fa33796dcb6b4b747d"
+      },
+      {
+        "file_path": "images/ic_fi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_fi.png",
+        "checksum": "a6ac18554e9aa36c337d0a213dfb99d3003fc3342d47c50086b1ed911f8d952f"
+      },
+      {
+        "file_path": "images/ic_flexmoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_flexmoney.png",
+        "checksum": "0d47ad43d50d73052ed5f3cccdad87288d3b207918fd72e6e761b55960e25dfa"
+      },
+      {
+        "file_path": "images/ic_freecharge.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_freecharge.png",
+        "checksum": "e800740025159718e1c13c27149f548112c6949343defca59dd64834a5f52005"
+      },
+      {
+        "file_path": "images/ic_giftcard_faded.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_giftcard_faded.png",
+        "checksum": "1152eb401f199e76a3c6ad11e0da12fc14353de97547e37857c3873f2fa54bb6"
+      },
+      {
+        "file_path": "images/ic_googlepay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_googlepay.png",
+        "checksum": "661b9548169423ff0b96eaa1d8f8dd721757d3f737035920d3d0fc3e1b6c9313"
+      },
+      {
+        "file_path": "images/ic_grabpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_grabpay.png",
+        "checksum": "8f80e895d6d8a14b7675b91bf8963991a2cf34c500becc6760cec613333c727a"
+      },
+      {
+        "file_path": "images/ic_grabpaypaylater.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_grabpaypaylater.png",
+        "checksum": "8f80e895d6d8a14b7675b91bf8963991a2cf34c500becc6760cec613333c727a"
+      },
+      {
+        "file_path": "images/ic_green_offer.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_green_offer.png",
+        "checksum": "06f9764d4df1e40f1558086c0c029d4e7d84ecf2eb4155be1fe7a3800f250e21"
+      },
+      {
+        "file_path": "images/ic_hdfc_clemi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_hdfc_clemi.png",
+        "checksum": "51a49dc74741e75aeb4f43799c0ea95342115cff82a45ac5a42c4ef2b49ef046"
+      },
+      {
+        "file_path": "images/ic_hdfc_flexipay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_hdfc_flexipay.png",
+        "checksum": "44d87ff1524e942a50c001180b10fef5ee5baaaed0c0201ed5f0f371e9581a98"
+      },
+      {
+        "file_path": "images/ic_icici_cl.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_icici_cl.png",
+        "checksum": "5baf8019b48f77a28e2cc58bf2a290213ee0be653b25cc2356f619976b9708a7"
+      },
+      {
+        "file_path": "images/ic_icici_clemi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_icici_clemi.png",
+        "checksum": "c9e9edc9ae3a2698522595bd1efd2723d1407d6790c7c7897372f3be0c37d941"
+      },
+      {
+        "file_path": "images/ic_icon_back.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_icon_back.png",
+        "checksum": "c719979dc7cc8effb0fd55403e3e54b8434cfb46da978122af8d3a4074ab1472"
+      },
+      {
+        "file_path": "images/ic_ideamoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_ideamoney.png",
+        "checksum": "4b84915d60d7b588cae72857bc453ee0a15d2ecba46d0bc03dd32da78ac720ed"
+      },
+      {
+        "file_path": "images/ic_idfc_clemi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_idfc_clemi.png",
+        "checksum": "69602dd0cfee58ad2243cb8a5d869100664dc66598241e8efc5e94188ca50bb6"
+      },
+      {
+        "file_path": "images/ic_info.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_info.png",
+        "checksum": "8906bbc4a8bd7dd11926ae69bfbad95650fd6fe9c58604e6708059e5a508cd81"
+      },
+      {
+        "file_path": "images/ic_jiomoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_jiomoney.png",
+        "checksum": "c64b626a10917f92b6dd0b6c862ff7ca332fa8532c984c39884a66ffa13c7ba3"
+      },
+      {
+        "file_path": "images/ic_jupiter.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_jupiter.png",
+        "checksum": "8148a309feac68d5124d79478a059c00e984cd075c518edcec9855174541f179"
+      },
+      {
+        "file_path": "images/ic_klarna.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_klarna.png",
+        "checksum": "353b39749baf34c7e8335ee203e9e28aaf8d44822efd271aeb65fd2b49076180"
+      },
+      {
+        "file_path": "images/ic_kotak_clemi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_kotak_clemi.png",
+        "checksum": "6d93368b49f91cab5300cb39d28a9c5628365986c9438ee5006023039a1c2526"
+      },
+      {
+        "file_path": "images/ic_lazypay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_lazypay.png",
+        "checksum": "f0e46714d9853e5f255d41ff6bbc6ef24b1a30fe9c7b9c2564939fee9692f0f7"
+      },
+      {
+        "file_path": "images/ic_lock.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_lock.png",
+        "checksum": "3ed25155f7e41c48eef1caa53e855763ff445d79d57e903aa5414b499c518a49"
+      },
+      {
+        "file_path": "images/ic_mobikwik.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mobikwik.png",
+        "checksum": "91906dd72976de807d431ad011ba180e61e899793cd75070f106006ce5b9f65a"
+      },
+      {
+        "file_path": "images/ic_mobikwikzip.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mobikwikzip.png",
+        "checksum": "a0b0bf91b9404d5e44e6ad7d782c40b355b5fd4d4b5537be0b53689f9c418889"
+      },
+      {
+        "file_path": "images/ic_mode_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mode_card.png",
+        "checksum": "0e6d523f72c9ca90861869d4163b0485062c339355e5a6a4d386925d0fe0fbde"
+      },
+      {
+        "file_path": "images/ic_mode_net_banking.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mode_net_banking.png",
+        "checksum": "29b5c9707319eda11eb7230141d0c770eda23516013cec351607965448229121"
+      },
+      {
+        "file_path": "images/ic_mode_wallet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mode_wallet.png",
+        "checksum": "4439f84f1a28314f07e4c2832d657eafec7e8f51cd0b7c3f75a0b39880a37ea1"
+      },
+      {
+        "file_path": "images/ic_moffers.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_moffers.png",
+        "checksum": "3232b81434cd2699c2ce2f4e45d818cc0a3423e92dc2198a9f6ea4cfcf3e3a38"
+      },
+      {
+        "file_path": "images/ic_mpesa.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mpesa.png",
+        "checksum": "a7b326f4c4bafd341b9a3c6d2ee2a99da342cec06113141132db7f6889388317"
+      },
+      {
+        "file_path": "images/ic_mrupee.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_mrupee.png",
+        "checksum": "ceb8fd45d475bc5728f922d579f49347c3fcb4eb6447c5e27201c287e7bda130"
+      },
+      {
+        "file_path": "images/ic_nbbl.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_nbbl.png",
+        "checksum": "e855582c131b874592dc0a2b166a9170875aba36636695441830af362de3ecba"
+      },
+      {
+        "file_path": "images/ic_offer_applied_new.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_offer_applied_new.png",
+        "checksum": "30519c1be53895528f64f21ee3ca67b10898c9542d6045717b7c4d94021f658a"
+      },
+      {
+        "file_path": "images/ic_offer_applied.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_offer_applied.png",
+        "checksum": "5514d233b40f3c03a289fb2db39677f958c02f2e5569d7e66304e03f1e74c983"
+      },
+      {
+        "file_path": "images/ic_offer_icon_new.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_offer_icon_new.png",
+        "checksum": "fe8c00b00437ce7731c72a5e684e13ccf4381f393851e1efda0bd469b1ec0591"
+      },
+      {
+        "file_path": "images/ic_offer_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_offer_icon.png",
+        "checksum": "0f9e54eee49af30e1e533a3bab6b10fb5b588ed9ef0bce412892a52a90e9953a"
+      },
+      {
+        "file_path": "images/ic_olamoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_olamoney.png",
+        "checksum": "06f3be662adcea79544e4ec0c2a58e6e71fcc14ca54abd5a2b3ff7e9cddd8300"
+      },
+      {
+        "file_path": "images/ic_one_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_one_card.png",
+        "checksum": "da19e0b76a81d7747f5b2d0a5b671f8d001fdc0d508da5e7ff367d1077161803"
+      },
+      {
+        "file_path": "images/ic_outage.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_outage.png",
+        "checksum": "09411a74346a850dfea3898c66d26c0ce5e0610667b3b9cd458a9ab24a1a0ff5"
+      },
+      {
+        "file_path": "images/ic_oxicash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_oxicash.png",
+        "checksum": "87c9bf1ce0fabea74a3769f7daee78c4a0e699ec1e331bf928c8b64c54eabae3"
+      },
+      {
+        "file_path": "images/ic_oxigen.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_oxigen.png",
+        "checksum": "578cbc5db9375ca69b34ca3fcb3579a27fb08322d15de6f2cc947ede91280f71"
+      },
+      {
+        "file_path": "images/ic_paycash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_paycash.png",
+        "checksum": "86c0a3a2a2143cda3f2f275c230e349c76aa27e35634f16e13eda9df6d728a5e"
+      },
+      {
+        "file_path": "images/ic_paynow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_paynow.png",
+        "checksum": "cd35b83f725ab39b54c0d56bdc18ef1ebcdeb13516889d7e0bb6c6671f013cdc"
+      },
+      {
+        "file_path": "images/ic_paypal.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_paypal.png",
+        "checksum": "1ce16aebb192d2514905f9d27fe7a8f41f134ef5038b996c2a34b9214bcb7913"
+      },
+      {
+        "file_path": "images/ic_paytm_allinone.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_paytm_allinone.png",
+        "checksum": "3d76bd8b660076d81463d55527e463db43a6cd498568c4b104568e768a95f4a7"
+      },
+      {
+        "file_path": "images/ic_paytm_postpaid.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_paytm_postpaid.png",
+        "checksum": "3dac7ed86b17efff638b2b015b42003becb72f6697ff61937e929697d9b4b0e9"
+      },
+      {
+        "file_path": "images/ic_paytm.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_paytm.png",
+        "checksum": "a7e56852bb83cc88cc70481ed0e0184b0444b76eff33a6b746c7b6430564e2a5"
+      },
+      {
+        "file_path": "images/ic_payumoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_payumoney.png",
+        "checksum": "a4aa4c5b89f103f07cf77b23dbbaa8a049a59c718b74eb06e2c17f48e23c5865"
+      },
+      {
+        "file_path": "images/ic_payzapp.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_payzapp.png",
+        "checksum": "3a6ac608290ec63060ac7f4e9bf25a183a491f1479d01a7a688ada76ca1d74c0"
+      },
+      {
+        "file_path": "images/ic_phonepe.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_phonepe.png",
+        "checksum": "19aabd6321edf443e32075e7ac7e9cdcb529b844a54e6817a664608f403f43c7"
+      },
+      {
+        "file_path": "images/ic_postpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_postpay.png",
+        "checksum": "1fb3c6a0d2693264bfb48d8eda2ef85990b627714714807aa6439aa80710ca3d"
+      },
+      {
+        "file_path": "images/ic_question_mark.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_question_mark.png",
+        "checksum": "d4d311fa129896ad39f01da9a497537a3a0702cf6ad0563f873961eba1f8d48c"
+      },
+      {
+        "file_path": "images/ic_sbibuddy.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_sbibuddy.png",
+        "checksum": "56433452ef68899da9f5c7cc4d8a6c59c84f9c6f135d421fccc6710a68c29f0a"
+      },
+      {
+        "file_path": "images/ic_search_cancel.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_search_cancel.png",
+        "checksum": "ee9034dfd24d4a2e5fa9d68ad1134b60b788cc4c3ac3c0a60b21fca7b31bcb8c"
+      },
+      {
+        "file_path": "images/ic_search_gray.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_search_gray.png",
+        "checksum": "5d53257dddf1a7d2149adcb7294a21b3e82fb86a60cd886571f395a9aadd5d3f"
+      },
+      {
+        "file_path": "images/ic_secure.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_secure.png",
+        "checksum": "a6b0539bb70c0c63777de7dd36859dcfda58b84769a07a907935ab50913b0621"
+      },
+      {
+        "file_path": "images/ic_shareit.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_shareit.png",
+        "checksum": "9a0a98fa7a468532ce1c4a1b5be7dc9cebebce427f54f21c29edc8a8b85c1f72"
+      },
+      {
+        "file_path": "images/ic_shopse.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_shopse.png",
+        "checksum": "e9606bb4de3e959fd1dd876d222c82405e9fcbaee93e6e395085cfe0d67beb53"
+      },
+      {
+        "file_path": "images/ic_simpl.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_simpl.png",
+        "checksum": "b15109c7a528d0e20725da86dfad6f2be2dd0f7b6d26fcfcab7bb5de26469d80"
+      },
+      {
+        "file_path": "images/ic_slice.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_slice.png",
+        "checksum": "c550bdbbd2d93320c3455bb8b48335ad8421d4a7f85550a0d19ff5ae1ca7baaa"
+      },
+      {
+        "file_path": "images/ic_snapmint.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_snapmint.png",
+        "checksum": "832eb734efdacbc1d36e1f0101b585271e4316601d9b6dfc15408dc2967c7a38"
+      },
+      {
+        "file_path": "images/ic_sodexo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_sodexo.png",
+        "checksum": "be87924537546f7f3c267cfc78a07d2d99f4aedb18d39dc495705e7bcd99122c"
+      },
+      {
+        "file_path": "images/ic_stashfin_clemi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_stashfin_clemi.png",
+        "checksum": "3c34ef96beb67c3eb10b2dc0fb4f5c04793450832b9ff6fd7202d5aab5b66934"
+      },
+      {
+        "file_path": "images/ic_tabby.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_tabby.png",
+        "checksum": "e677b85356bb24ed2cccebb93dd00272fc701b6140100814519c5590a9e3b36c"
+      },
+      {
+        "file_path": "images/ic_tatapaylater.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_tatapaylater.png",
+        "checksum": "46beb08d8227325017d8ede244dde9a3f39843e65b04a876428df031c9719ca0"
+      },
+      {
+        "file_path": "images/ic_tr.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_tr.png",
+        "checksum": "21038f83ace6f8dbcc496607504d695bbbae0dd23f145318eeaa4c7e72d73c61"
+      },
+      {
+        "file_path": "images/ic_trash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_trash.png",
+        "checksum": "f7f8bf3725ed3efb0c323097e2ab4329a7dea35f2ac89ea729687a14161aa762"
+      },
+      {
+        "file_path": "images/ic_upi_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_upi_icon.png",
+        "checksum": "917865625d6f49d0a52b3fe220d6a7320bfac934acfabc262eefa641f5e4a1fe"
+      },
+      {
+        "file_path": "images/ic_verified_detail.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_verified_detail.png",
+        "checksum": "636324c675b21f18cf0b04d3b083ad960cd838d88f25224a890e2a1016ce7e85"
+      },
+      {
+        "file_path": "images/ic_warning_log.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_warning_log.png",
+        "checksum": "89936f405136cca298fd0ccbf8f85d19da3b61e97d739b83da35484ddfae5e1e"
+      },
+      {
+        "file_path": "images/ic_warning_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_warning_logo.png",
+        "checksum": "89936f405136cca298fd0ccbf8f85d19da3b61e97d739b83da35484ddfae5e1e"
+      },
+      {
+        "file_path": "images/ic_wechatpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_wechatpay.png",
+        "checksum": "635d47d5641583932450044cc28884465e147c9e2a87794261766541fcfffbe3"
+      },
+      {
+        "file_path": "images/ic_white_tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_white_tick.png",
+        "checksum": "3b6dc6232eda2870dc5e6bee04092ce25b6e38ac03c36419ba69d435badb180d"
+      },
+      {
+        "file_path": "images/ic_yespay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_yespay.png",
+        "checksum": "41ab4a84475ca18999166fb06b1c19325b6ec09bd1fbec71d05847b7d95aaa90"
+      },
+      {
+        "file_path": "images/ic_ypaycash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_ypaycash.png",
+        "checksum": "5929769928cdcf89b0fa5015353b76cbe73b5f31dddf22868f1720d90a60640d"
+      },
+      {
+        "file_path": "images/ic_zestmoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_zestmoney.png",
+        "checksum": "4128fd9ac18a8d036bd95110ad44b2ade34642c28da11d1ecb8bef8b06dbc32c"
+      },
+      {
+        "file_path": "images/ic_zipcash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/ic_zipcash.png",
+        "checksum": "a0b0bf91b9404d5e44e6ad7d782c40b355b5fd4d4b5537be0b53689f9c418889"
+      },
+      {
+        "file_path": "images/inapp_collect_complete.png",
+        "url": "https://payments.juspay.in/hyper/images/common/inapp_collect_complete.png",
+        "checksum": "1c6c8b7209ef4415c6b0ec4b25b0b89ec74c78d26e015a38b8cd7873a07f0e6c"
+      },
+      {
+        "file_path": "images/inapp_collect_initiate.png",
+        "url": "https://payments.juspay.in/hyper/images/common/inapp_collect_initiate.png",
+        "checksum": "4927de6bd27861123cce12e8a7b0a80e90b16396ed93a701e0f266c8c7106b3c"
+      },
+      {
+        "file_path": "images/info_icon_white.png",
+        "url": "https://payments.juspay.in/hyper/images/common/info_icon_white.png",
+        "checksum": "a8b5b1e15077b9feb614531fdc973982518dca79f519c27daabd0ec66709630b"
+      },
+      {
+        "file_path": "images/info_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/info_icon.png",
+        "checksum": "eb8483264df7c0291190d131a436a1011c818831040ba4b054997d61625a99aa"
+      },
+      {
+        "file_path": "images/instant_discount_offer_0.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_0.png",
+        "checksum": "7fbea9798f2a901bdc81b22dede32f38cb34f3e971b609f7bd7cd358408e8b26"
+      },
+      {
+        "file_path": "images/instant_discount_offer_1.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_1.png",
+        "checksum": "bde50f055584f957cf8bb6eb43f0434101ea898b8f6616c3f4cc5e8c047cf119"
+      },
+      {
+        "file_path": "images/instant_discount_offer_10.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_10.png",
+        "checksum": "656c6741f571bdd70e79fb9655e52bbbc38d7646bb07c7735e0b529db0440c8f"
+      },
+      {
+        "file_path": "images/instant_discount_offer_11.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_11.png",
+        "checksum": "4989fc8a9cd7fc0264c0da42c462f77f2350e098fcf0c9e83bd74ae9ea7e6dca"
+      },
+      {
+        "file_path": "images/instant_discount_offer_2.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_2.png",
+        "checksum": "1783e7732c35a1fc981f66e3ef121dd572432fdd9cd6d50efcb9342d3f111cca"
+      },
+      {
+        "file_path": "images/instant_discount_offer_3.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_3.png",
+        "checksum": "6d4c7735d9656dbda9e900f275fb3a300cac9f911b06231ded4c8a07c45d19b9"
+      },
+      {
+        "file_path": "images/instant_discount_offer_4.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_4.png",
+        "checksum": "d3d93fe09c5db9344145ffe98902f1d1ebd7d2c38499566231b6816f9af55a31"
+      },
+      {
+        "file_path": "images/instant_discount_offer_5.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_5.png",
+        "checksum": "818c69f48328c0fc9907c7876fecfce40bfdb125cf4575f4c06ea53c6d7608dc"
+      },
+      {
+        "file_path": "images/instant_discount_offer_6.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_6.png",
+        "checksum": "ef658ea4739305172756e2c4f76f047d56568f7ff0321696113dbad3efce229e"
+      },
+      {
+        "file_path": "images/instant_discount_offer_7.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_7.png",
+        "checksum": "4cc5af208cab1e35f904bf399e45a0e7466f737af70ff34027734024fe2ea004"
+      },
+      {
+        "file_path": "images/instant_discount_offer_8.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_8.png",
+        "checksum": "a27d8a201ff4c1e304b48cef3b92692981aaa5d443ae2030d86efd87ff853a1a"
+      },
+      {
+        "file_path": "images/instant_discount_offer_9.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant_discount_offer_9.png",
+        "checksum": "27a235f857410d3015cabdead16dae69bf9091b08402cf8dd95b03ef37380d4a"
+      },
+      {
+        "file_path": "images/instant.png",
+        "url": "https://payments.juspay.in/hyper/images/common/instant.png",
+        "checksum": "dfa934046c7270b7aac34f4cc5145f39c4e5a039edaab1ce9027ba29e540b8f8"
+      },
+      {
+        "file_path": "images/jp_add_more_details.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_add_more_details.png",
+        "checksum": "0a7a6747adfe9005f3dcd91107650d04c1253e05ba7049597736d18e6fa43022"
+      },
+      {
+        "file_path": "images/jp_addcardgames_20250624115440.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_addcardgames_20250624115440.png",
+        "checksum": "877e0be651b8e36ae83f50008527b315620777e99fc95b328662c3d99adc4bc6"
+      },
+      {
+        "file_path": "images/jp_airtelmoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_airtelmoney.png",
+        "checksum": "3824afc9ddfe673a906bc29be1a2a333f653faf2822b76cfe820e4318a6b5bb1"
+      },
+      {
+        "file_path": "images/jp_alert_red_triangle.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_alert_red_triangle.png",
+        "checksum": "af4ea28c630f9f9990308fbd728e91185eea336fb6f1c77503485ee9f7286025"
+      },
+      {
+        "file_path": "images/jp_alert_triangle.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_alert_triangle.png",
+        "checksum": "794fd6ffcbd7f9b6302db61036648e66ac062c1624bf8152db4f46a231f2a9e9"
+      },
+      {
+        "file_path": "images/jp_alipay_cn.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_alipay_cn.png",
+        "checksum": "14ed41f3b479cd80fa061ac20222cd4cae694b2318e33d34f0a014d6ea7adaff"
+      },
+      {
+        "file_path": "images/jp_alipay_hk.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_alipay_hk.png",
+        "checksum": "c283c83fb8f639bb9d5852d39e21db41b294df1ebcedeb10e55cbbb5f842518d"
+      },
+      {
+        "file_path": "images/jp_amazonpay_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_amazonpay_upi.png",
+        "checksum": "b70752847d41da830cc2713dbb2659412e3de2c31c060933f3796a135a9575e1"
+      },
+      {
+        "file_path": "images/jp_amazonpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_amazonpay.png",
+        "checksum": "0c9aa507619a728ece6a57a0691d317db18c55ced6df54b22d74287c95cf00d8"
+      },
+      {
+        "file_path": "images/jp_apple_pay_laptop_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_apple_pay_laptop_icon.png",
+        "checksum": "91e706f4e6f061535b6609e2452d55ce24584631107bb41c24f2ca948bb79bc0"
+      },
+      {
+        "file_path": "images/jp_arrow_down.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_arrow_down.png",
+        "checksum": "c9ac663660031f3cd85d6e500d57dea17d28afb0ce7264388486c207c94d0436"
+      },
+      {
+        "file_path": "images/jp_arrow_up.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_arrow_up.png",
+        "checksum": "708fc15a29ac0444b1e3b1a75bb9133f537330b2ca72797c30eb37d7bb2705fc"
+      },
+      {
+        "file_path": "images/jp_autopay_banner_new.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_autopay_banner_new.png",
+        "checksum": "b26d9a6587dea7c7e7b63342d4e8a80dc77b3805683b4dc19ffe9c033a23288e"
+      },
+      {
+        "file_path": "images/jp_autopay_banner_recommended.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_autopay_banner_recommended.png",
+        "checksum": "40585f9fb30f446f9a1942e9aa54439dae2a29ff1cf1d161ffe61be676134cff"
+      },
+      {
+        "file_path": "images/jp_autopay_popup_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_autopay_popup_icon.png",
+        "checksum": "6e28857c7deb33a4aa6657d48274a54525872a021b5b61b02273c979cba8be67"
+      },
+      {
+        "file_path": "images/jp_autopay_tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_autopay_tick.png",
+        "checksum": "464e77e75f94e9ee7f5e91c27c218095c2f3b79c9403e269d7571500cb89d13c"
+      },
+      {
+        "file_path": "images/jp_axis_logo_short.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_axis_logo_short.png",
+        "checksum": "fea0d2c44ef92d641e6c013933863953f4c647bc04343fecaffeb598f7e3222e"
+      },
+      {
+        "file_path": "images/jp_axisupi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_axisupi.png",
+        "checksum": "610dc60ad88bc651cd715fcd9f734ea9f196bc0dd0a3f924ea54037a3c98fba5"
+      },
+      {
+        "file_path": "images/jp_backicongames_20250704150246.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_backicongames_20250704150246.png",
+        "checksum": "d7b82dab2e0bbac91dbdfc3dabcc037aee5302641e5f00c70efd07196bdf2b9e"
+      },
+      {
+        "file_path": "images/jp_bell_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_bell_upi.png",
+        "checksum": "62d4b7a8113d6ef3e78a61ec4b7b10ad60c4026db9972abdfc14ebeb581289ab"
+      },
+      {
+        "file_path": "images/jp_bharatpe.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_bharatpe.png",
+        "checksum": "f1402075d4794d82295512a26744514f327bb100c56f05dfb89fc3bb1cf95d73"
+      },
+      {
+        "file_path": "images/jp_bhim_juspay_full_dark.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_bhim_juspay_full_dark.png",
+        "checksum": "393c0cd8c3f6939c3297a234d4a4594b6532692904222d994716d308421d57a7"
+      },
+      {
+        "file_path": "images/jp_bhim_juspay_full.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_bhim_juspay_full.png",
+        "checksum": "9e6a5f7ba378a424cf92d1aa6c9b2b10fdf3e9a7eee2c9e22f31019b0e819d0a"
+      },
+      {
+        "file_path": "images/jp_bhim.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_bhim.png",
+        "checksum": "0d92ed28365d8c446a4591c952aed79ef9dfa67101bc7c6018a42c93c3de1a3b"
+      },
+      {
+        "file_path": "images/jp_blurred_qr.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_blurred_qr.png",
+        "checksum": "75130725574b681e3320c2bac10d0c27c737c885b7c799338703c22187de16f7"
+      },
+      {
+        "file_path": "images/jp_calendar.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_calendar.png",
+        "checksum": "a7ce39a23351ca841cacc0c64bb8d6ddc4ddce6f65829c4b6b81b47e5d5c45bf"
+      },
+      {
+        "file_path": "images/jp_capillary_reward.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_capillary_reward.png",
+        "checksum": "743d4dd72f2362a2267e3894d6e8eb0646c035a39d297b6dec64a72f06e3e572"
+      },
+      {
+        "file_path": "images/jp_card_less_emi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_card_less_emi.png",
+        "checksum": "634b54beb5047c0fdaeb2405300a8f63fb487bc01f54c698632e11e2627acce7"
+      },
+      {
+        "file_path": "images/jp_card_type_diners.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_card_type_diners.png",
+        "checksum": "48a4732d5f170a707fbdca5592ce4e1148079ea14f264b7a8c1b4e0ab05e3b1a"
+      },
+      {
+        "file_path": "images/jp_card_type_hsbc.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_card_type_hsbc.png",
+        "checksum": "42725561b4c9e5ccdb291fc33f730b5811e3e8c601e81df46bf12ad8f4d006d2"
+      },
+      {
+        "file_path": "images/jp_card_type_unionpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_card_type_unionpay.png",
+        "checksum": "57ffd97c49a0b2e34e61415d4ffe199dd173904d1c39044e51ad0aa9c0d8f07d"
+      },
+      {
+        "file_path": "images/jp_cashback_applied.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cashback_applied.png",
+        "checksum": "169e7336b7bc4c4544b5b03e95fd354de50dce83beb073cb2e622a90c209c442"
+      },
+      {
+        "file_path": "images/jp_cashback_preview.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cashback_preview.png",
+        "checksum": "9e87c9fb1b0afa7b82e954ee4c8df15e539fedfc4360678cfd55705d76319584"
+      },
+      {
+        "file_path": "images/jp_change_sim.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_change_sim.png",
+        "checksum": "d06aa3fc263d0522fc29ffe46a78578076565ec62d9d0831d52075d98c20339a"
+      },
+      {
+        "file_path": "images/jp_checkbox_01_979797_20250624115714.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_checkbox_01_979797_20250624115714.png",
+        "checksum": "a4813e5f9d4f5b7efb89a2337d986747ab47000007bfa6c800cd7cabe7bf9034"
+      },
+      {
+        "file_path": "images/jp_checkboxselected_02_308a2e_20250624115711.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_checkboxselected_02_308a2e_20250624115711.png",
+        "checksum": "75f53dedc0e48cb7776353fa2205cd63030b6ffefb4c78fe8be89bb320b3b729"
+      },
+      {
+        "file_path": "images/jp_checked_radio_button.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_checked_radio_button.png",
+        "checksum": "e381dbe725266c5f5c48171bf77679ae6da3e122b6e4ffe0a036be5fd482a6df"
+      },
+      {
+        "file_path": "images/jp_checklist_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_checklist_upi.png",
+        "checksum": "bba91aa1eef2ad96bbc95b5fec2a5ed57e5baaf78a6922b2e28304879f8cbf37"
+      },
+      {
+        "file_path": "images/jp_chevron_down_black.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_chevron_down_black.png",
+        "checksum": "87afcefc451708d64b8528f79669dc52b8d799dff8d4fd04479a980f861cb55b"
+      },
+      {
+        "file_path": "images/jp_circular_arrow_dark.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_circular_arrow_dark.png",
+        "checksum": "43949dc7b7dea85c77079a6020defe62adb7844cfb56a3ce7d334c3ab34542b9"
+      },
+      {
+        "file_path": "images/jp_circular_arrow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_circular_arrow.png",
+        "checksum": "bce8eff1917e0e21e6d701b9184eff79159d6e13de17cefff901acd9c9005d37"
+      },
+      {
+        "file_path": "images/jp_circularradiobutton_01_080d1a_20250702182517.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_circularradiobutton_01_080d1a_20250702182517.png",
+        "checksum": "6dabecdcbb1c906740a8850c329e08329993cbe6320ed63d63834d982e1410fb"
+      },
+      {
+        "file_path": "images/jp_copy_qr_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_copy_qr_icon.png",
+        "checksum": "d384ecd114bdb6be102ddef331758ac10c7965b6050c567cd0b0d5773c0f45aa"
+      },
+      {
+        "file_path": "images/jp_cred_black.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cred_black.png",
+        "checksum": "37f0b88c54200234d669960514ee8f18e9630ff41f6780aaf2c9668ea7e998df"
+      },
+      {
+        "file_path": "images/jp_cred_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cred_card.png",
+        "checksum": "dd8520f2c6a9aedf09ba76a1fc2c1c573beb1dd393120770edee1b1dd53ded07"
+      },
+      {
+        "file_path": "images/jp_cred_dark.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cred_dark.png",
+        "checksum": "1e57ae0df2c37e196a0866f176397fd3d81a3088a07816df06632963d332a713"
+      },
+      {
+        "file_path": "images/jp_cred_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cred_logo.png",
+        "checksum": "9897033ea32875f2b6f03648e87b1f2e76cc8284cff8935b480c554c651e1ded"
+      },
+      {
+        "file_path": "images/jp_cred_nudge_image.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cred_nudge_image.png",
+        "checksum": "431f433978d4d3598fafb366d6cdb9f42c9ed8ba90cf36658d2bfb32c597b238"
+      },
+      {
+        "file_path": "images/jp_cred.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_cred.png",
+        "checksum": "569577baf1186fbc980ec8472d8c53bab14063af00717869fa0c6345218b1f04"
+      },
+      {
+        "file_path": "images/jp_credit_card_emi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_credit_card_emi.png",
+        "checksum": "12619959e37d622fcfb733e225e1bcf89ae424dc8664c1aec70fde7726cdf8c9"
+      },
+      {
+        "file_path": "images/jp_credpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_credpay.png",
+        "checksum": "569577baf1186fbc980ec8472d8c53bab14063af00717869fa0c6345218b1f04"
+      },
+      {
+        "file_path": "images/jp_croped_shield1.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_croped_shield1.png",
+        "checksum": "9245cbf459ec8b53c499f49803f7859d9b8686812d8bb8d53061e5662d5450fa"
+      },
+      {
+        "file_path": "images/jp_croped_shield2.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_croped_shield2.png",
+        "checksum": "fdc0ee0c4c5cc17dd47f4409b2ee2acee4486c800156fc208513bfc8ec5015dc"
+      },
+      {
+        "file_path": "images/jp_ctc_evoucher.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ctc_evoucher.png",
+        "checksum": "61d31939600000e64b74e9167c4801d2043466aa92d4ad8b568bbfce7a451a41"
+      },
+      {
+        "file_path": "images/jp_ctc_outlet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ctc_outlet.png",
+        "checksum": "5b90f81fc6292c8e91e62330be0370a4dc60e4fe4ffb971240f2b47860f82bdb"
+      },
+      {
+        "file_path": "images/jp_debit_card_emi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_debit_card_emi.png",
+        "checksum": "12619959e37d622fcfb733e225e1bcf89ae424dc8664c1aec70fde7726cdf8c9"
+      },
+      {
+        "file_path": "images/jp_default_bank_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_default_bank_icon.png",
+        "checksum": "8ac79c7b96fa48c6065270e9d411a2c97f61ca9ef70f9968b0245e883c222369"
+      },
+      {
+        "file_path": "images/jp_default_bank.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_default_bank.png",
+        "checksum": "311e8fe68192cc2320183c99164f883bbb4101addccc850c6f2139b6b086a57c"
+      },
+      {
+        "file_path": "images/jp_default_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_default_card.png",
+        "checksum": "8a024d5befbb3fd0defb2eb4accf5c3484c9b61ea3d9a3f472e3d3fa9f1c484f"
+      },
+      {
+        "file_path": "images/jp_defaultcardgames_20250624130040.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_defaultcardgames_20250624130040.png",
+        "checksum": "9d6bd44ee9f4b76eafb5524ccbf16d1ea89ee1674852168490ed6090786623b4"
+      },
+      {
+        "file_path": "images/jp_dot.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_dot.png",
+        "checksum": "4ac9cb6c580569180f8be4655246e8302aa56a1f78771c40edc1227ae29435f1"
+      },
+      {
+        "file_path": "images/jp_editable_part_payment_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_editable_part_payment_icon.png",
+        "checksum": "cb66bf2e31fb4c3f617093ecf3b011698a7a9508ab81c878b9bfa12e38dd9e30"
+      },
+      {
+        "file_path": "images/jp_emi_widget_info.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_emi_widget_info.png",
+        "checksum": "bedff424722192e3737d0d589f69468a4e05ecc0ec8a51b3ecc953931a0968a4"
+      },
+      {
+        "file_path": "images/jp_failed.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_failed.png",
+        "checksum": "f5c6cd9bfdc937ff50e71050773caa738ee1ca8e3ca0d264d5b272c94773781f"
+      },
+      {
+        "file_path": "images/jp_fampay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fampay.png",
+        "checksum": "5eff2f50c551142794c964284ad22dcee252206da988c0fe082a7997d76b6562"
+      },
+      {
+        "file_path": "images/jp_fastertag.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fastertag.png",
+        "checksum": "b8f7c50fe4af51ee4302a0ec2bc180125034e015d2253d0ad679ff0364ab5847"
+      },
+      {
+        "file_path": "images/jp_fixed_part_payment_edu_1.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fixed_part_payment_edu_1.png",
+        "checksum": "9630aeaf7a32359e3d755b8dae66186ce2933c47f52bf76d7584f8e4cb21ef1e"
+      },
+      {
+        "file_path": "images/jp_fixed_part_payment_edu_2.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fixed_part_payment_edu_2.png",
+        "checksum": "51f8140d585c90a638ada1aaa765ddacf9c1c4f68590225c107b12155d07f73b"
+      },
+      {
+        "file_path": "images/jp_fixed_part_payment_edu_3.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fixed_part_payment_edu_3.png",
+        "checksum": "70d2115d7252bf5ac16167bc5c6abbfb0acc5f31681f818f1e99287b05dc615d"
+      },
+      {
+        "file_path": "images/jp_fixed_part_payment_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fixed_part_payment_icon.png",
+        "checksum": "9942dae89c63fd8e3ec0a02de9ddcac1474b1379c44c635e6f934fa3c8ac9b28"
+      },
+      {
+        "file_path": "images/jp_flash_rewards.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_flash_rewards.png",
+        "checksum": "a30f6f94667fdd49d9d3a6dff263f9f36a05a94f548735f1867d87747153cff5"
+      },
+      {
+        "file_path": "images/jp_flash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_flash.png",
+        "checksum": "e7dd15fdb57153c8b2fedb83dfbffe604bd8a04b3150a7884717938ac64ae20f"
+      },
+      {
+        "file_path": "images/jp_flashlight.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_flashlight.png",
+        "checksum": "747b2eafe12905f3fc56348b5a67c316ba1866d73e0f125744f05d78266f7f4b"
+      },
+      {
+        "file_path": "images/jp_flexible_part_payment_edu_1.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_flexible_part_payment_edu_1.png",
+        "checksum": "c07b5b8272b3228c0ea1758e07c5aca324e83e0fd3129c7cf5a47b4e4ad220da"
+      },
+      {
+        "file_path": "images/jp_flexible_part_payment_edu_2.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_flexible_part_payment_edu_2.png",
+        "checksum": "51f8140d585c90a638ada1aaa765ddacf9c1c4f68590225c107b12155d07f73b"
+      },
+      {
+        "file_path": "images/jp_flexible_part_payment_edu_3.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_flexible_part_payment_edu_3.png",
+        "checksum": "0bd1040fd10a50b9a5641e4840b87e334bfb5d6ac6cffba1f9b9973be0c03dab"
+      },
+      {
+        "file_path": "images/jp_fps_qr.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fps_qr.png",
+        "checksum": "4316a5456e0fb49453ac7f3391e32985fbd348f5ec2a64649e6f4b7d3d26f6f4"
+      },
+      {
+        "file_path": "images/jp_fps.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_fps.png",
+        "checksum": "4316a5456e0fb49453ac7f3391e32985fbd348f5ec2a64649e6f4b7d3d26f6f4"
+      },
+      {
+        "file_path": "images/jp_gift_card_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_gift_card_icon.png",
+        "checksum": "43c9a55ac3be4e56c419c5d3910594fc5d2cd059dbcfdd79dd265056d4d26424"
+      },
+      {
+        "file_path": "images/jp_googlepay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_googlepay.png",
+        "checksum": "4d537746744a8d1b6fbcf7bbc54a6616d7dfc2039561f98569d8be321238a102"
+      },
+      {
+        "file_path": "images/jp_gosats.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_gosats.png",
+        "checksum": "a0c295b406cc2fe55df17cbf4e6747acf2f6d298597f5ed3b8595d837e9b1c83"
+      },
+      {
+        "file_path": "images/jp_group_offer.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_group_offer.png",
+        "checksum": "7f3c02bc8d861bf92115d3dcffe1c3073f8ce9d39e9b7a6737d29114fcfe9b0b"
+      },
+      {
+        "file_path": "images/jp_hdfc_neu.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_hdfc_neu.png",
+        "checksum": "0395aaedb8ca2d47805c328bfb521b68247651e7102045b82de60b1c9bf87f70"
+      },
+      {
+        "file_path": "images/jp_ic_alipay_cn.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_alipay_cn.png",
+        "checksum": "14ed41f3b479cd80fa061ac20222cd4cae694b2318e33d34f0a014d6ea7adaff"
+      },
+      {
+        "file_path": "images/jp_ic_alipay_hk.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_alipay_hk.png",
+        "checksum": "c283c83fb8f639bb9d5852d39e21db41b294df1ebcedeb10e55cbbb5f842518d"
+      },
+      {
+        "file_path": "images/jp_ic_amazonpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_amazonpay.png",
+        "checksum": "d78b74876a4fb641afd46efa5cb9f4ff4bb61646d86c5bbfbe5369187bf3837a"
+      },
+      {
+        "file_path": "images/jp_ic_amex.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_amex.png",
+        "checksum": "66d1931d4ecec53817bed93cbf6783735b1445ec748f8f49d32a9b2ffe15f504"
+      },
+      {
+        "file_path": "images/jp_ic_applepay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_applepay.png",
+        "checksum": "d5bf29ed3b93865d62a90a43887610502df7d383773e3960ba4290a36e67a8bc"
+      },
+      {
+        "file_path": "images/jp_ic_bajajpay_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_bajajpay_upi.png",
+        "checksum": "a0ad2e4d70344065428c227c0d0090e747e488eeaaa96e4242ae40e5e2c66de1"
+      },
+      {
+        "file_path": "images/jp_ic_bank_607223.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_bank_607223.png",
+        "checksum": "bf89e6ec9ae8441a1cf64773c035feee925e15d127caf0cd8b7dcc94981e07dc"
+      },
+      {
+        "file_path": "images/jp_ic_bank_aditya.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_bank_aditya.png",
+        "checksum": "3465f05e506195d04a6a2b07310652b8768d8b234f6e7ee659e88b083d588cd0"
+      },
+      {
+        "file_path": "images/jp_ic_cardtype_pluxee.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_cardtype_pluxee.png",
+        "checksum": "58962488b28bc2a205b81f3d9f6c3ad2ed9c3869c9ac65d02254d4ab5479b946"
+      },
+      {
+        "file_path": "images/jp_ic_cardtypepluxee.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_cardtypepluxee.png",
+        "checksum": "58962488b28bc2a205b81f3d9f6c3ad2ed9c3869c9ac65d02254d4ab5479b946"
+      },
+      {
+        "file_path": "images/jp_ic_cred.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_cred.png",
+        "checksum": "569577baf1186fbc980ec8472d8c53bab14063af00717869fa0c6345218b1f04"
+      },
+      {
+        "file_path": "images/jp_ic_gallery.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_gallery.png",
+        "checksum": "b3a2d1c871286d74c3823b0ff19822142b1fc38269717f020fd1f2cb03fee3be"
+      },
+      {
+        "file_path": "images/jp_ic_gokiwi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_gokiwi.png",
+        "checksum": "4a8399ddb5f1fd55cd8f9094dad194c414fa5fe389a75b5bd23fef39dee445a4"
+      },
+      {
+        "file_path": "images/jp_ic_mobikwik.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_mobikwik.png",
+        "checksum": "23979297441e8091dc68ceb6302709cbd0c0550c146cf83b51296eec409f3800"
+      },
+      {
+        "file_path": "images/jp_ic_navi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_navi.png",
+        "checksum": "b673444961e05c3cff740a05b50106dbaa673a77576bd165463783e3fd183d40"
+      },
+      {
+        "file_path": "images/jp_ic_olapostpaid.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_olapostpaid.png",
+        "checksum": "be598861c33f2dfff15fa4e33158d5c873d525e3ae43b906f6b988144a67742e"
+      },
+      {
+        "file_path": "images/jp_ic_payme.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_payme.png",
+        "checksum": "2f831e7cd791ebef258b30ee13fd59def0955fa84b2e4cb0fd697ac48c367450"
+      },
+      {
+        "file_path": "images/jp_ic_paytm_wallet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_paytm_wallet.png",
+        "checksum": "313eebc31b6156d957fba64525a66cacfdb43e84b8d031a1263d0936efa3db3f"
+      },
+      {
+        "file_path": "images/jp_ic_payzapp_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_payzapp_upi.png",
+        "checksum": "b01a17fe7c73ac4c800238797d15b609d18843c622d7c45d91b40809a9ef8520"
+      },
+      {
+        "file_path": "images/jp_ic_pencil.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_pencil.png",
+        "checksum": "9afb612216060aaed6053b22274a45e4fba4c1955de706a133c2c16c49c57cd0"
+      },
+      {
+        "file_path": "images/jp_ic_pluxee.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_pluxee.png",
+        "checksum": "c4ce8aa1311c1e2c3b88bed51929b2a21f535f9c7093e6167ec30ce3931753e7"
+      },
+      {
+        "file_path": "images/jp_ic_popupi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_popupi.png",
+        "checksum": "6df654b5eb9a37f3713bd6a01c88b8fad26dfe4e7a0a911ab6077da48c0aa098"
+      },
+      {
+        "file_path": "images/jp_ic_scapia.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_scapia.png",
+        "checksum": "ddfb2a231889110e178b192b40aa7176b522738dd06f9d12fc903357972606fc"
+      },
+      {
+        "file_path": "images/jp_ic_search_gray.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_search_gray.png",
+        "checksum": "d4bbe421aa44c4e95bf82f84df142e76486f0887c2123448ffc3f27f8f64808a"
+      },
+      {
+        "file_path": "images/jp_ic_settings.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_settings.png",
+        "checksum": "5b9e9ccbf4effd2dff366c3b054e010f36eaf60f84decc44254755646d7e59cd"
+      },
+      {
+        "file_path": "images/jp_ic_shopse.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_shopse.png",
+        "checksum": "e9606bb4de3e959fd1dd876d222c82405e9fcbaee93e6e395085cfe0d67beb53"
+      },
+      {
+        "file_path": "images/jp_ic_sim.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_sim.png",
+        "checksum": "6f7a6595fdbc2260b862b73cbeeaab71632cb07954feabf4462b5edc7a8ab541"
+      },
+      {
+        "file_path": "images/jp_ic_tataneu.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_tataneu.png",
+        "checksum": "46beb08d8227325017d8ede244dde9a3f39843e65b04a876428df031c9719ca0"
+      },
+      {
+        "file_path": "images/jp_ic_wallet_bajajpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_wallet_bajajpay.png",
+        "checksum": "a0ad2e4d70344065428c227c0d0090e747e488eeaaa96e4242ae40e5e2c66de1"
+      },
+      {
+        "file_path": "images/jp_ic_wechatpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_wechatpay.png",
+        "checksum": "5a351f8ab0ed2611054837e55c9c7cbe37ebdf5673b9c8a82154e0036ac6a597"
+      },
+      {
+        "file_path": "images/jp_ic_whatsapp_pay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ic_whatsapp_pay.png",
+        "checksum": "ef1f479429f25520827aa315c48e03c06dcf9116e622ab83541d9a4941360901"
+      },
+      {
+        "file_path": "images/jp_indigo_bluchips.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_indigo_bluchips.png",
+        "checksum": "d4d071b0a7f9d77f9b6bf6448f190203077ae10d83b7977be159072240423b42"
+      },
+      {
+        "file_path": "images/jp_info_icon_black.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_info_icon_black.png",
+        "checksum": "1ce7af3d7cc4efafc52d5916011d2a2a794c383a822ecb177a35fa9e5812adb3"
+      },
+      {
+        "file_path": "images/jp_info_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_info_icon.png",
+        "checksum": "fd3b9814b209248b9350411cc9904b114a8352217a8cb3f5bf3c03e0f007fee0"
+      },
+      {
+        "file_path": "images/jp_info_red.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_info_red.png",
+        "checksum": "de0321be01e9a4af12c67c8f8aacf65654244baa7551347d8cbc8b8ee196c4dc"
+      },
+      {
+        "file_path": "images/jp_intermiles.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_intermiles.png",
+        "checksum": "601ddfa7050895998b57cbd954f3c8c7e788b7e89485d3d5ac70de961095bc0c"
+      },
+      {
+        "file_path": "images/jp_jupiter_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_jupiter_upi.png",
+        "checksum": "84ff6d67d301a0a4618b6e93fe8dd268355e6cf76c37cb0401146c807fc9f3eb"
+      },
+      {
+        "file_path": "images/jp_jupiter.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_jupiter.png",
+        "checksum": "48a2733616dd31e6c9971973c33a0836cb0a24c5af3011a8f0f34c7b5d94e0ff"
+      },
+      {
+        "file_path": "images/jp_juspay_brand_dark.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_juspay_brand_dark.png",
+        "checksum": "8fa0eac8064f35aac16516dd9d8c7cdc7cbbca262c52b19cbbbb687b57e0e6cb"
+      },
+      {
+        "file_path": "images/jp_juspay_brand.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_juspay_brand.png",
+        "checksum": "ef35745172229773ce5135656064d1934c8b4a6b835629125a0b1fe92a032e28"
+      },
+      {
+        "file_path": "images/jp_kotak811.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_kotak811.png",
+        "checksum": "5ebcddd6e4e9cd47e65c7ac63543cd71e2ec434a06ef0564b09e6c4712f58e83"
+      },
+      {
+        "file_path": "images/jp_kotakupi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_kotakupi.png",
+        "checksum": "bf50923c014145cbb827638bd2c0a16fd6dc09c1ce40ff7262ba30a81120e7ab"
+      },
+      {
+        "file_path": "images/jp_lightning_fast.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_lightning_fast.png",
+        "checksum": "5bee7c9eef78cc47cad4cf760b2d5f64b098d2cf17a7bbb1c30d8920224e36d2"
+      },
+      {
+        "file_path": "images/jp_ligthning_fast_pill.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ligthning_fast_pill.png",
+        "checksum": "16730955e2768388500f8246e1a4c4e08ab4f146092f0bcf835a14402f2f6a3d"
+      },
+      {
+        "file_path": "images/jp_loylty_rewardz.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_loylty_rewardz.png",
+        "checksum": "9309451cab2acc7b0c897efd02da584bf2b8df7b2a46ed2be1afdbfd0698b144"
+      },
+      {
+        "file_path": "images/jp_magic_star.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_magic_star.png",
+        "checksum": "f8f852392cd9b2361181b5388994917542f34524ac45faab21842a423bd613c4"
+      },
+      {
+        "file_path": "images/jp_mail.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_mail.png",
+        "checksum": "8bebb90e8eb9fcd86d89d7a1bac9a65fe2fb6be9d01e2629f587c847f13e5533"
+      },
+      {
+        "file_path": "images/jp_mandate_banner.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_mandate_banner.png",
+        "checksum": "ee3fac7601240796540a7c459e94320fcd962eccad5e2d4d988e746fe3771e0d"
+      },
+      {
+        "file_path": "images/jp_mmt.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_mmt.png",
+        "checksum": "b6b3ea23ba86bf30d089dd4c3de30b32cfc2d6fe82446bea09f8f1d54bb616bf"
+      },
+      {
+        "file_path": "images/jp_mobikwik.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_mobikwik.png",
+        "checksum": "0dbf88f5be2fdffbca7c560b1c23db6899ca2aa373e72b3fb72d3c3eee596571"
+      },
+      {
+        "file_path": "images/jp_mobile_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_mobile_upi.png",
+        "checksum": "3d0fe16412079c3255c8290117902d9a7f7433230279bc9efb547d3b95fdf3d2"
+      },
+      {
+        "file_path": "images/jp_moneyview.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_moneyview.png",
+        "checksum": "0ff638d94d47295580adbcba28674dbac2c3923228f849b24ef2858713fa9e87"
+      },
+      {
+        "file_path": "images/jp_nav_left_arrow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_nav_left_arrow.png",
+        "checksum": "5d449c7a6f53075ad0d20fac8a8d994983f94e74494b4d98cd1cbb30df09aa10"
+      },
+      {
+        "file_path": "images/jp_nav_right_arrow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_nav_right_arrow.png",
+        "checksum": "1dc80441c5938bbd884732ff68237dd301627c678616e96019eb181b955b1313"
+      },
+      {
+        "file_path": "images/jp_nb_qr.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_nb_qr.png",
+        "checksum": "638a2ec70c7be82e1fc85ecdcfae2dbc9beb9db0c86044d53c655dfd7cf32647"
+      },
+      {
+        "file_path": "images/jp_nb_redirect.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_nb_redirect.png",
+        "checksum": "79eeccb75dbe648ec3719dcf56086339779f5e4061840f28e3d03a2b89bd51de"
+      },
+      {
+        "file_path": "images/jp_nb_scan.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_nb_scan.png",
+        "checksum": "1afa428658da50303c031ea37d48bdeee1c017501b5cfcefc3cb07c5c1c6f1ee"
+      },
+      {
+        "file_path": "images/jp_new_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_new_upi.png",
+        "checksum": "a13667b6b3897b206d4ca55ea3e1ff1f9c667d0025f099e844fa2844e9bfb42e"
+      },
+      {
+        "file_path": "images/jp_niyo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_niyo.png",
+        "checksum": "69e25c72c82e8c221b41e847c751a3fa25efbb2b31f89a1e6f431d64d9606b7f"
+      },
+      {
+        "file_path": "images/jp_norupee_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_norupee_upi.png",
+        "checksum": "9256cab19b8381f8e907be2fb6ab9858f6f61419d4ce17f299fcf729d3c1f5eb"
+      },
+      {
+        "file_path": "images/jp_offer_close_button.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_offer_close_button.png",
+        "checksum": "c9adf70f50bd96beb7b3ffa61c6ea17c2aa7633c783bd35793400624d4cf24e7"
+      },
+      {
+        "file_path": "images/jp_offer_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_offer_icon.png",
+        "checksum": "475a608866a04c0a24c40076968fa684e517445a85fe969717964d237ea9f56e"
+      },
+      {
+        "file_path": "images/jp_part_payment_education_banner.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_part_payment_education_banner.png",
+        "checksum": "dc48d5db9c09c77513cb49fc810d848ee05a5b871993c3106a77832964e83d0e"
+      },
+      {
+        "file_path": "images/jp_part_payment.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_part_payment.png",
+        "checksum": "9362ad3f7be2e8e1a1d8bee14520d10caebb4d9fb9800732404e7f7a7277d0ae"
+      },
+      {
+        "file_path": "images/jp_pay_with_vouchers.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_pay_with_vouchers.png",
+        "checksum": "9d25696c8a521805946de942c4863e3abccb0e1b54275c998df98f2a832ac601"
+      },
+      {
+        "file_path": "images/jp_payme.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_payme.png",
+        "checksum": "2f831e7cd791ebef258b30ee13fd59def0955fa84b2e4cb0fd697ac48c367450"
+      },
+      {
+        "file_path": "images/jp_paynow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_paynow.png",
+        "checksum": "39cb12765881febc4583f2f4f2f33ae79154cea872c80c7be11ae634ddffeead"
+      },
+      {
+        "file_path": "images/jp_paytm.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_paytm.png",
+        "checksum": "3c53fbc31ed9b97212cfac69bb0073006c00f305815800d8e5ff3cfb9aca9a90"
+      },
+      {
+        "file_path": "images/jp_permission.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_permission.png",
+        "checksum": "1a9397bb80f9f9c79b119e27fa4f7661e3920f0a17af83e2ba5681b1bd289a0c"
+      },
+      {
+        "file_path": "images/jp_phonepe.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_phonepe.png",
+        "checksum": "39255ab92b04fbf83d9d9df34c8a9e710e4f986ee4d5787bf2f90c9241f3548a"
+      },
+      {
+        "file_path": "images/jp_pix.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_pix.png",
+        "checksum": "6e96a6b4fe4c040edf9a1225b496435001d8272b1c1045160449e822d0d7bca2"
+      },
+      {
+        "file_path": "images/jp_popup_icon_failed.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_popup_icon_failed.png",
+        "checksum": "6a8285b0a751668e8a6519111963ac7f6b6f039adc107f85b2db909caebd9f7b"
+      },
+      {
+        "file_path": "images/jp_popup_icon_no_internet.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_popup_icon_no_internet.png",
+        "checksum": "ae6713f6057f5764548bb692cd98c7db7f8430b90c2177cbf08df026734f3a31"
+      },
+      {
+        "file_path": "images/jp_popup_icon_timed_out.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_popup_icon_timed_out.png",
+        "checksum": "d521fc9482da3d463ff33b7a6e57cf9b649274b5ae1b8857fc5efab53509ec33"
+      },
+      {
+        "file_path": "images/jp_popup_offer_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_popup_offer_icon.png",
+        "checksum": "8ad5e9252a50b82efdc48b90c53dcc7ad0cb5cd948f14e953b6975b543f6440c"
+      },
+      {
+        "file_path": "images/jp_popup_warning.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_popup_warning.png",
+        "checksum": "52eb4c4517cf2f081b41f1f54ef956b3dc104a09020ea649c4c4b6e34043954e"
+      },
+      {
+        "file_path": "images/jp_powered_axis_npci_juspay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_powered_axis_npci_juspay.png",
+        "checksum": "1510cbc1baca28efcd49ca0ec1bdf92fe9feb3c3cf2331418fa5018f83b1600f"
+      },
+      {
+        "file_path": "images/jp_powered_axis_npci.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_powered_axis_npci.png",
+        "checksum": "786260bace0b36deec11d837bff9329e4105b46ef491ee2158cefb0a60101ad3"
+      },
+      {
+        "file_path": "images/jp_powered_axis.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_powered_axis.png",
+        "checksum": "f4d9a71476b268f557028f3a7510e737b8cf0d8108a468a54a8ad3a1552b73e1"
+      },
+      {
+        "file_path": "images/jp_price_lock_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_price_lock_icon.png",
+        "checksum": "37b9690fddfc4c52297367e99d91f8a86f94a30700886024258edd1acbd14ec6"
+      },
+      {
+        "file_path": "images/jp_promptpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_promptpay.png",
+        "checksum": "3a741415a53dec3acecac4347fee2bb211d97663434e68706c0338cf2e1c2cbb"
+      },
+      {
+        "file_path": "images/jp_questionmarkgames_20250624130146.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_questionmarkgames_20250624130146.png",
+        "checksum": "96ae42d9bc10f526cc8dfb1f868a8c270d645540cd2c1ed9e02791e395a1870b"
+      },
+      {
+        "file_path": "images/jp_qwikcilver.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_qwikcilver.png",
+        "checksum": "a20f49982657282a379c90146b12030bddd4d15a6836ad898f41d4690de50d49"
+      },
+      {
+        "file_path": "images/jp_redirect.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_redirect.png",
+        "checksum": "d4ff834e8265ce032c8c64ec491091e8e41973c040ada40f7b7da3b68e49f82f"
+      },
+      {
+        "file_path": "images/jp_refresh_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_refresh_upi.png",
+        "checksum": "ad322360d5f80b5fa0f40bcf368186fa3322622c9fb60fc14d0b22cdc44ebca6"
+      },
+      {
+        "file_path": "images/jp_retry_failure.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_retry_failure.png",
+        "checksum": "7b6518c8ac6b78fee9e03dc7f27c96a56635043911e3afc94b1a3b78ebd5aebf"
+      },
+      {
+        "file_path": "images/jp_reward_points.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_reward_points.png",
+        "checksum": "b42c40cd069962f11e9100401c4efae94eaae8ee4e569dcfc4a3648862a5ed40"
+      },
+      {
+        "file_path": "images/jp_rewardz_hub.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_rewardz_hub.png",
+        "checksum": "e5fcd713c9a1f6b273e2825396cd0b122881c97f89a40a1c3e9383fe45e82b06"
+      },
+      {
+        "file_path": "images/jp_right_arrow_white.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_right_arrow_white.png",
+        "checksum": "08bb9428ba2fcb1025978445be1d1f94452c46a920e11fc0bd8067197a2f6a3c"
+      },
+      {
+        "file_path": "images/jp_rightarrowgames_20250704150156.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_rightarrowgames_20250704150156.png",
+        "checksum": "8ab174bacfca4a1345500e473f99d62c96c4c3deaad192f39520221e6d7deaa1"
+      },
+      {
+        "file_path": "images/jp_rotate_exclaim.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_rotate_exclaim.png",
+        "checksum": "07d9e884146e6d3a0a427e374129bc0b4ef6333363bd4f87edc71738b74c522d"
+      },
+      {
+        "file_path": "images/jp_rotate_exclamation.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_rotate_exclamation.png",
+        "checksum": "51d89f0dba6bf8ee150ac4dda0e0abee8fd6a620297276b1992615cae00e8a33"
+      },
+      {
+        "file_path": "images/jp_rotate_phone.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_rotate_phone.png",
+        "checksum": "7537bf421d28e343eb7f0d00203fc95d72140a831b279081fa0d8d4eb062a7a1"
+      },
+      {
+        "file_path": "images/jp_save_qr_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_save_qr_icon.png",
+        "checksum": "a5d05161b5c5416a6adc4078d0e66321992dcd691cfb644a7e3ddab9c62177de"
+      },
+      {
+        "file_path": "images/jp_save.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_save.png",
+        "checksum": "404e5a75d073a2b434e625eee8f0ff754c4b3d0ad37926ba618d22aa92c8a2ac"
+      },
+      {
+        "file_path": "images/jp_sbi_card.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_sbi_card.png",
+        "checksum": "17eb4982401edfe794a176ae0edbeda1d4bdc9b3fb015897adbfd6929ef929e5"
+      },
+      {
+        "file_path": "images/jp_search_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_search_icon.png",
+        "checksum": "acd58921ac90047ac6b2f954954f56bbf963752046f45e4acf904654c89fd1b7"
+      },
+      {
+        "file_path": "images/jp_secured_by_juspay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_secured_by_juspay.png",
+        "checksum": "516a269441b1db27a3bddc91aeb938e5463e33e3686520f8125412cb60b27531"
+      },
+      {
+        "file_path": "images/jp_secured.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_secured.png",
+        "checksum": "746261da76778e816b0efa0a839af1ebbdef2b0c9a1c2197227e679538d35d27"
+      },
+      {
+        "file_path": "images/jp_shield.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_shield.png",
+        "checksum": "bc35dd0c02ce15412c3804330d5da3d7f5a08873e3d28de2a0023759c6e05b82"
+      },
+      {
+        "file_path": "images/jp_simplypay_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_simplypay_upi.png",
+        "checksum": "ef7458574f920dce1d7dbf4d17bce0ae4cf9580e70c84ab700932391b09420ed"
+      },
+      {
+        "file_path": "images/jp_slide_arrow_right.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_slide_arrow_right.png",
+        "checksum": "bd8fcdc62547458b60cb07c7d37848c230ad3f8989218ccd5cf36a57ae8c917f"
+      },
+      {
+        "file_path": "images/jp_sms.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_sms.png",
+        "checksum": "68db4569035ad4d88d0fab53301c9728964ea93243e9b54b463a7532061155e2"
+      },
+      {
+        "file_path": "images/jp_sparkle.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_sparkle.png",
+        "checksum": "5ec013b322504147f925cef0a7844827ac982d8f6499650bd6fba1418216e03c"
+      },
+      {
+        "file_path": "images/jp_success.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_success.png",
+        "checksum": "5effb1301afc594dac7b6a1d9feb430ae19dd0cf98729f37edc5cbc6b9c0eb1a"
+      },
+      {
+        "file_path": "images/jp_supercoins.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_supercoins.png",
+        "checksum": "e7f9240dd2f5a4eaabbdf05eeb54613e5da165125a1182f5d67dea52d4cc3bdf"
+      },
+      {
+        "file_path": "images/jp_supermoney.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_supermoney.png",
+        "checksum": "ce173f7aedd7a24af53e985990b03b545d26dc8bb4ccc4bdf63deed2ce2d99ee"
+      },
+      {
+        "file_path": "images/jp_ta_thailand.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_ta_thailand.png",
+        "checksum": "a0742f4e10a1af923900003cc372daf7fcd49942b3d28acbdde9e691a8721726"
+      },
+      {
+        "file_path": "images/jp_tatadigital.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_tatadigital.png",
+        "checksum": "3fc844e88081928bc6e4bb66d1c27bbdf7714182c06b7eafeffde94b3fd8ec4c"
+      },
+      {
+        "file_path": "images/jp_tick_02_080d1a_20250702182522.png",
+        "url": "https://assets.juspay.in/hyper/assets/in.juspay.merchants/images/a23games/jp_tick_02_080d1a_20250702182522.png",
+        "checksum": "5d8fb7a3f4d249a76bd38ebabe46f80489e03bdc79084c659e6815325ccb3552"
+      },
+      {
+        "file_path": "images/jp_tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_tick.png",
+        "checksum": "3466a7c90bad07ea577b7608f074460c337334f30cc6d21edaed89bc5f873425"
+      },
+      {
+        "file_path": "images/jp_time_cycle.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_time_cycle.png",
+        "checksum": "bdcd08c23e27ca2fb5bbe6c99a7a311ad7e65dd61ba4bee8b233358539338769"
+      },
+      {
+        "file_path": "images/jp_timeline_due_later.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_timeline_due_later.png",
+        "checksum": "220ece69cfa52309932ea2daada3269a8e95fd4906af846ad4698931df4b3ba9"
+      },
+      {
+        "file_path": "images/jp_timeline_due_now.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_timeline_due_now.png",
+        "checksum": "ae8f1460f4ad7f971902bcbb4f836db4251907b433071dc5b3cae2399fff781d"
+      },
+      {
+        "file_path": "images/jp_timeline_paid.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_timeline_paid.png",
+        "checksum": "4fb8c74de87e4a591111b325ad73106e6adefd1ec6f7967491c89957b2a74208"
+      },
+      {
+        "file_path": "images/jp_times_point.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_times_point.png",
+        "checksum": "ced837044033984161caf78a77dbbe4538b8bae5f5df1ebe384edc2107c6c7a2"
+      },
+      {
+        "file_path": "images/jp_toggle_off.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_toggle_off.png",
+        "checksum": "6bc94a0ec5f4a2fcb9cc676286aca9553c88433a34d49d96ba22e06a11b4d807"
+      },
+      {
+        "file_path": "images/jp_toggle_on.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_toggle_on.png",
+        "checksum": "7451f7323a0f6fe38744e6663669a2ffab5f7f45218b90de05e99dfc9e5256d3"
+      },
+      {
+        "file_path": "images/jp_upi_branding_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_upi_branding_logo.png",
+        "checksum": "28437e413341c4155c84dc50a9034ec18c89035559aa26d25987bfc4710ff55a"
+      },
+      {
+        "file_path": "images/jp_upi_flash.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_upi_flash.png",
+        "checksum": "4851335d48071d697b8facc90a1fd6fa044b96a7b0968cadbce4d0be93373e3a"
+      },
+      {
+        "file_path": "images/jp_upi_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_upi_logo.png",
+        "checksum": "845351f3841db84f15fd0dc6b638a11b33c8b55f5c0e13be6b5957ee332dd508"
+      },
+      {
+        "file_path": "images/jp_validate_vpa.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_validate_vpa.png",
+        "checksum": "5f9bfa693491a50b2577277a538d5978a061932d484a9204be2d46e8ce05c62f"
+      },
+      {
+        "file_path": "images/jp_verifying_sim_bar1.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_verifying_sim_bar1.png",
+        "checksum": "bfb83e3837c2def64126ba64d2348fcab2dd7dac5f67e90a4877212230697663"
+      },
+      {
+        "file_path": "images/jp_verifying_sim_bar2.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_verifying_sim_bar2.png",
+        "checksum": "df5a94b106acece2dc66273f65877641645b71137a15bb9b92a5434e45877ee5"
+      },
+      {
+        "file_path": "images/jp_verifying_sim_bar3.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_verifying_sim_bar3.png",
+        "checksum": "ab5bf050af7f5f6e05e1caf893370bf206eeffd09a4dde1c2b6c3dbcb2d70f53"
+      },
+      {
+        "file_path": "images/jp_verifying_sim.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_verifying_sim.png",
+        "checksum": "3dcaa3027df61fa471666261dbeddce21c52d7427124feffca5f9ce18bbb20f3"
+      },
+      {
+        "file_path": "images/jp_visa_card_art.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_visa_card_art.png",
+        "checksum": "ec91b97d845392d8eb4c6cec2d89e528484922a3f98e3da7b05d9aef82ed6728"
+      },
+      {
+        "file_path": "images/jp_wechatpay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_wechatpay.png",
+        "checksum": "5a351f8ab0ed2611054837e55c9c7cbe37ebdf5673b9c8a82154e0036ac6a597"
+      },
+      {
+        "file_path": "images/jp_whatsapp.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_whatsapp.png",
+        "checksum": "0266977d2975300360c522dc506b603075fd995c2aaed221198c6ae6ab0a6399"
+      },
+      {
+        "file_path": "images/jp_white_cross.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_white_cross.png",
+        "checksum": "4acee0c66d820ae4aea29d2f0dd46a00286d7867be50ef46a3ad2c85147d4b6b"
+      },
+      {
+        "file_path": "images/jp_white_tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_white_tick.png",
+        "checksum": "a66713ec09149c8f8c086f1cc29d3970b6244b3fc3025ff0cd92b66ef5848b1c"
+      },
+      {
+        "file_path": "images/jp_yespay_autopay_p2m.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_yespay_autopay_p2m.png",
+        "checksum": "b0e9be89253266b618deb8955b0d025fe67ec35c9464f3881797a37355cd6c71"
+      },
+      {
+        "file_path": "images/jp_yespay_p2m.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_yespay_p2m.png",
+        "checksum": "afd3f22513ed7f6448f08cbac860a073a88e6aed95353d0f9f689a4583323a47"
+      },
+      {
+        "file_path": "images/jp_zillion.png",
+        "url": "https://payments.juspay.in/hyper/images/common/jp_zillion.png",
+        "checksum": "7bed843cd6c040ae407c53e8ac85731743f0261a1daf55024054fcfe2b71d5fc"
+      },
+      {
+        "file_path": "images/juspay_arrow_up.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_arrow_up.png",
+        "checksum": "0f256808e9fa47bf202fde4155cfb5a955e380db3508568d75f996765fe10adc"
+      },
+      {
+        "file_path": "images/juspay_branding.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_branding.png",
+        "checksum": "d1b54fb165255028824f78ec6c6b34fb45316943c5be9a58d24031989e1cf14d"
+      },
+      {
+        "file_path": "images/juspay_cross.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_cross.png",
+        "checksum": "3b9b760a897306b1bae8acebccfcfbc6f2a21b526c1e13dfc40c688b8738befc"
+      },
+      {
+        "file_path": "images/juspay_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/ec/juspay_icon.png",
+        "checksum": "f827367eb43fbdcc2fb32dc30cfe05087dca1c38eecc17bd9cbf8c1e1caba9fc"
+      },
+      {
+        "file_path": "images/juspay_info.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_info.png",
+        "checksum": "071ae52f06a610c97d0d6acbeb7fc09ddc3e5125be837a2baab7ef6db5b789b3"
+      },
+      {
+        "file_path": "images/juspay_logo_blue.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_logo_blue.png",
+        "checksum": "c2a8cee671f8a34a6f9e4ac28ca153951586d5ed40e4631ed8c0b5e36f7e50fa"
+      },
+      {
+        "file_path": "images/juspay_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_logo.png",
+        "checksum": "33649d2fb6659896e1fa1f2d8b9038d4ddcc94a0bad7a06938c625178c3396d9"
+      },
+      {
+        "file_path": "images/juspay_safe_branding.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_safe_branding.png",
+        "checksum": "a7b08ef9c5490547a75531abc849c8dfc4b63b964ac8e51f4549cfbb30074b76"
+      },
+      {
+        "file_path": "images/juspay_safe_grey.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_safe_grey.png",
+        "checksum": "0ce05f87052b45556f12299a2482f955cc15f37735ba3f9b3e88b5982e0f40c2"
+      },
+      {
+        "file_path": "images/juspay_safe_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_safe_logo.png",
+        "checksum": "6240522e5f5cebf054e825135803457051f594355b4cc76706913a66f13e2da3"
+      },
+      {
+        "file_path": "images/juspay_safe.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_safe.png",
+        "checksum": "5d7ec136a5bc26224247af7656dbe44bf126aa366e889b4c0b8240943937e6d6"
+      },
+      {
+        "file_path": "images/juspay_visa_blue.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_visa_blue.png",
+        "checksum": "cd56823300c6aeaf6e350330803f04c8fda076ef33ad0da973b57597319a15d2"
+      },
+      {
+        "file_path": "images/juspay_warning.png",
+        "url": "https://payments.juspay.in/hyper/images/common/juspay_warning.png",
+        "checksum": "cb3e8ca5cd83616e1ad125a1d44f134bc150319a50b593fcf760e5800cf1fdbc"
+      },
+      {
+        "file_path": "images/juspay.png",
+        "url": "https://payments.juspay.in/hyper/images/intent/juspay.png",
+        "checksum": "18b756dbdf0ac1c93cba6198a93ab73ade87f03e6005f488a1e6107b04873e32"
+      },
+      {
+        "file_path": "images/loader.png",
+        "url": "https://payments.juspay.in/hyper/images/intent/loader.png",
+        "checksum": "1b99052850099fa7791c6b0c0338583d7c5951c7cd7fe4cc943c330779fd817b"
+      },
+      {
+        "file_path": "images/loyalty_rewards.png",
+        "url": "https://payments.juspay.in/hyper/images/common/loyalty_rewards.png",
+        "checksum": "81c799041a8e1c90d3bf4fb1cdb68e008d149dc703af43a44f10eee2a4fb4933"
+      },
+      {
+        "file_path": "images/mobile_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/mobile_upi.png",
+        "checksum": "3d0fe16412079c3255c8290117902d9a7f7433230279bc9efb547d3b95fdf3d2"
+      },
+      {
+        "file_path": "images/net_banking_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/net_banking_icon.png",
+        "checksum": "20ed962932bdcae1b5dad38d8e43de64be66912c23da7499351c94f4371c19c0"
+      },
+      {
+        "file_path": "images/new_card_plus.png",
+        "url": "https://payments.juspay.in/hyper/images/common/new_card_plus.png",
+        "checksum": "ecee5743e48e28b5cb70d42b9ef1d54beeea88e8cceda5bfe03fc584318dc5e2"
+      },
+      {
+        "file_path": "images/no_balance_rewards.png",
+        "url": "https://payments.juspay.in/hyper/images/common/no_balance_rewards.png",
+        "checksum": "122ce65abaab9a98ef90df34568c14873c24efe5d1502e45f59064cc13aab626"
+      },
+      {
+        "file_path": "images/norupee_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/norupee_upi.png",
+        "checksum": "9256cab19b8381f8e907be2fb6ab9858f6f61419d4ce17f299fcf729d3c1f5eb"
+      },
+      {
+        "file_path": "images/noupiapp.png",
+        "url": "https://payments.juspay.in/hyper/images/intent/noupiapp.png",
+        "checksum": "c8416e1e49cca8c05ae38bcb7a58d46933fa41f9c35c4f59d25f108f0de16a8e"
+      },
+      {
+        "file_path": "images/offer_default_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/offer_default_icon.png",
+        "checksum": "ba5503724e25c4fb7a7213654a2d50a7d840a4a94c75ef354fb63390269e3d01"
+      },
+      {
+        "file_path": "images/offer_listitem_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/offer_listitem_icon.png",
+        "checksum": "46038c3a38d6df0301783087093b1cbf5df6f52aa48ef6ddbb663ae4a681093c"
+      },
+      {
+        "file_path": "images/page_broken.png",
+        "url": "https://payments.juspay.in/hyper/images/common/page_broken.png",
+        "checksum": "f168ab2587964262298393f5651e9d21b4886dcb98e8738810047621c9375f6f"
+      },
+      {
+        "file_path": "images/pay_later_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/pay_later_icon.png",
+        "checksum": "075610368a19bdc3f2dc2bc9a2205b92f251b0503e3593b2c43d408e11ffb814"
+      },
+      {
+        "file_path": "images/pay_rewards.png",
+        "url": "https://payments.juspay.in/hyper/images/common/pay_rewards.png",
+        "checksum": "6f6fcba80ebf257a0c7a51a3fec0ff4a9837b55e86d240ec7e30ee50136c6ecf"
+      },
+      {
+        "file_path": "images/payment_failed.png",
+        "url": "https://payments.juspay.in/hyper/images/common/payment_failed.png",
+        "checksum": "263e2d9b5bec8770cca6b277ca18f308993cd273dd1d43240fe353672f00450b"
+      },
+      {
+        "file_path": "images/paytm.png",
+        "url": "https://payments.juspay.in/hyper/images/common/paytm.png",
+        "checksum": "3fc33e53bca84ad0ee8f98954345af7269489ea339c46ca1e0d59f45ed0c7325"
+      },
+      {
+        "file_path": "images/phonepe.png",
+        "url": "https://payments.juspay.in/hyper/images/common/phonepe.png",
+        "checksum": "7bf8a14f5e92568c0fd2619d527b2f04b6186e0302ff61113df80893e24cd0c3"
+      },
+      {
+        "file_path": "images/popup_delete_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/popup_delete_icon.png",
+        "checksum": "7ad6eb023057d1b55556bd4f10cafc512c12e332ae894f39642f3595abb5b631"
+      },
+      {
+        "file_path": "images/powered_axis.png",
+        "url": "https://payments.juspay.in/hyper/images/common/powered_axis.png",
+        "checksum": "f4d9a71476b268f557028f3a7510e737b8cf0d8108a468a54a8ad3a1552b73e1"
+      },
+      {
+        "file_path": "images/powered_by_juspay.png",
+        "url": "https://payments.juspay.in/hyper/images/common/powered_by_juspay.png",
+        "checksum": "e0c3d19da78ed3ba260ba314a286ee12b599eb0e6b60d595c3a7ba6e39656e58"
+      },
+      {
+        "file_path": "images/refresh_upi.png",
+        "url": "https://payments.juspay.in/hyper/images/common/refresh_upi.png",
+        "checksum": "ad322360d5f80b5fa0f40bcf368186fa3322622c9fb60fc14d0b22cdc44ebca6"
+      },
+      {
+        "file_path": "images/registration_rewards.png",
+        "url": "https://payments.juspay.in/hyper/images/common/registration_rewards.png",
+        "checksum": "8395fbc434ad3c084940378c02ce195dc3d3d24394847589b0e5181fc36db1af"
+      },
+      {
+        "file_path": "images/right_arrow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/right_arrow.png",
+        "checksum": "f7a6214521d11be0150cfb98f861098060ef1e228f832d0573c737c65f39788b"
+      },
+      {
+        "file_path": "images/saved_card_lock.png",
+        "url": "https://payments.juspay.in/hyper/images/common/saved_card_lock.png",
+        "checksum": "efbd4e5aee3d502b2f68dfc40802a60c45f6d808588c9866b1dacd65cca07412"
+      },
+      {
+        "file_path": "images/success_green.png",
+        "url": "https://payments.juspay.in/hyper/images/common/success_green.png",
+        "checksum": "f6db9857a86ab85577fb15c1c0a8e22e64b3adbae79e04bed5d980553b772060"
+      },
+      {
+        "file_path": "images/switch_app.png",
+        "url": "https://payments.juspay.in/hyper/images/common/switch_app.png",
+        "checksum": "82712a1bdad162150e3823d2a22bd6fae242993b0dc6a1ed834d3adcb0753d79"
+      },
+      {
+        "file_path": "images/thundericon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/thundericon.png",
+        "checksum": "e8dc705f051949f1ee6c3a5c1ec46ee124ef0384da100d28bd932a0270d919f8"
+      },
+      {
+        "file_path": "images/tick.png",
+        "url": "https://payments.juspay.in/hyper/images/common/tick.png",
+        "checksum": "000e1637ce74938e1e07d8111a60cd1f0a4b215cb27f13f974ed74011fcf9508"
+      },
+      {
+        "file_path": "images/toolbar_back_arrow.png",
+        "url": "https://payments.juspay.in/hyper/images/common/toolbar_back_arrow.png",
+        "checksum": "89cb36ef4db58eaa8451f1ddcfe9be7437ddad70c39ce1bcd6abe8c1350e4021"
+      },
+      {
+        "file_path": "images/twid_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/twid_icon.png",
+        "checksum": "93eb1b660c8f541c53a10b29e581b657618861c43bd9c46ae169af43f9d7ef4d"
+      },
+      {
+        "file_path": "images/upi_juspay_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/upi_juspay_logo.png",
+        "checksum": "393c0cd8c3f6939c3297a234d4a4594b6532692904222d994716d308421d57a7"
+      },
+      {
+        "file_path": "images/upi_logo.png",
+        "url": "https://payments.juspay.in/hyper/images/common/upi_logo.png",
+        "checksum": "d869d3b1f3f5a134e579a5cfa8f6fe68abf9744fea1d747ccfc1c0d34c72c147"
+      },
+      {
+        "file_path": "images/visa_background.png",
+        "url": "https://payments.juspay.in/hyper/images/common/visa_background.png",
+        "checksum": "3d519713ad0c07043b16f7321c90a9371af6639a931a229e480c35738ec3a4a5"
+      },
+      {
+        "file_path": "images/visa_bolt.png",
+        "url": "https://payments.juspay.in/hyper/images/common/visa_bolt.png",
+        "checksum": "1329194abb29e5b43554d009d1674ea62d9a9d91a583c2d82557a719fdebd974"
+      },
+      {
+        "file_path": "images/visa_checkout.png",
+        "url": "https://payments.juspay.in/hyper/images/common/visa_checkout.png",
+        "checksum": "b950d2d124a5912b93be5f049addd81080beef878b2b4b9ae7b5ee166a3d64cf"
+      },
+      {
+        "file_path": "images/visa_thunder.png",
+        "url": "https://payments.juspay.in/hyper/images/common/visa_thunder.png",
+        "checksum": "21a59131067cc831e05fe36a10825ef2fd7720d8ffedb027f24d88cc2530738c"
+      },
+      {
+        "file_path": "images/wallet_icon.png",
+        "url": "https://payments.juspay.in/hyper/images/common/wallet_icon.png",
+        "checksum": "3f36f96b45d02ddf92ed55636ab776255398c04761a6aa74de8ce547c85420c6"
+      },
+      {
+        "file_path": "images/warning_blue.png",
+        "url": "https://payments.juspay.in/hyper/images/common/warning_blue.png",
+        "checksum": "c485ba7103fae47626a77df158f0c25598f3b3bb662dd99c2f3c49a56cfc8915"
+      },
+      {
+        "file_path": "images/white_arrow_right.png",
+        "url": "https://payments.juspay.in/hyper/images/common/white_arrow_right.png",
+        "checksum": "5bd6cc7d8444d62e596faf17a297ee0de8a83c1329a49ea57c7fb2b8b78f457e"
+      },
+      {
+        "file_path": "assets/fonts/Conto-Regular.ttf",
+        "url": "https://payments.juspay.in/hyper/assets/in.juspay.merchants/fonts/a23games/Conto/Conto-Regular.ttf",
+        "checksum": "959cffa11cb09b44b649f58ace59610ec716f5128c2f330b08f828e521bbde06"
+      },
+      {
+        "file_path": "assets/fonts/Conto-SemiBold.ttf",
+        "url": "https://payments.juspay.in/hyper/assets/in.juspay.merchants/fonts/a23games/Conto/Conto-SemiBold.ttf",
+        "checksum": "7321299b64b60155a1269a8b145189c0b72f913a3ad61dd1f913f934b1322a3f"
+      },
+      {
+        "file_path": "assets/fonts/Conto-Bold.ttf",
+        "url": "https://payments.juspay.in/hyper/assets/in.juspay.merchants/fonts/a23games/Conto/Conto-Bold.ttf",
+        "checksum": "5385327e1e01599b98fc89ddcc228b872e23fe91169fb0f76a765cc8fce8d64d"
+      },
+      {
+        "file_path": "assets/fonts/Roboto-Regular.ttf",
+        "url": "https://payments.juspay.in/hyper/fonts/Roboto-Regular.ttf",
+        "checksum": "bde8a188e37aa936b167aecc5e5a3da40262f6e51fd54c584f2cf2b6b99d96ca"
+      }
+    ],
+    "properties": {
+      "manifest": {},
+      "manifest_hash": {}
+    }
+  },
+  "resources": []
+}
