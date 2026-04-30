@@ -166,7 +166,14 @@
       "url": "https://assets.juspay.in/juspay/hyper-os/in.juspay.hyperos/release/2.0rc1/3.8.0/v1-boot_loader.jsa",
       "file_path": "v1-boot_loader.jsa"
     },
-    "important": [
+    "important": [],
+    "lazy": [],
+    "properties": {
+      "manifest": {},
+      "manifest_hash": {}
+    }
+  },
+  "resources": [
       {
         "file_path": "images/add_new_card_dark.png",
         "url": "https://payments.juspay.in/hyper/images/common/add_new_card_dark.png",
@@ -996,9 +1003,7 @@
         "file_path": "images/ic_bank_607212.png",
         "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607212.png",
         "checksum": "c0355b45542822b7b92b5097ec0bc870125ec478522164ed5dde03a1ee046d85"
-      }
-    ],
-    "lazy": [
+      },
       {
         "file_path": "images/ic_bank_607214.png",
         "url": "https://payments.juspay.in/hyper/images/common/ic_bank_607214.png",
@@ -3204,11 +3209,5 @@
         "url": "https://payments.juspay.in/hyper/fonts/Roboto-Regular.ttf",
         "checksum": "bde8a188e37aa936b167aecc5e5a3da40262f6e51fd54c584f2cf2b6b99d96ca"
       }
-    ],
-    "properties": {
-      "manifest": {},
-      "manifest_hash": {}
-    }
-  },
-  "resources": []
+    ]
 }
