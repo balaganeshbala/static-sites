@@ -2,8 +2,8 @@
   "version": "2",
   "config": {
     "version": "v0",
-    "release_config_timeout": 5000,
-    "boot_timeout": 5000,
+    "release_config_timeout": 1000,
+    "boot_timeout": 1000,
     "properties": {
       "sdk_config": {
         "defaultChannels": [],
@@ -3182,8 +3182,15 @@
         "file_path": "images/white_arrow_right.png",
         "url": "https://payments.juspay.in/hyper/images/common/white_arrow_right.png",
         "checksum": "5bd6cc7d8444d62e596faf17a297ee0de8a83c1329a49ea57c7fb2b8b78f457e"
-      },
-      {
+      }
+    ],
+    "properties": {
+      "manifest": {},
+      "manifest_hash": {}
+    }
+  },
+  "resources": [
+    {
         "file_path": "assets/fonts/Conto-Regular.ttf",
         "url": "https://payments.juspay.in/hyper/assets/in.juspay.merchants/fonts/a23games/Conto/Conto-Regular.ttf",
         "checksum": "959cffa11cb09b44b649f58ace59610ec716f5128c2f330b08f828e521bbde06"
@@ -3203,11 +3210,5 @@
         "url": "https://payments.juspay.in/hyper/fonts/Roboto-Regular.ttf",
         "checksum": "bde8a188e37aa936b167aecc5e5a3da40262f6e51fd54c584f2cf2b6b99d96ca"
       }
-    ],
-    "properties": {
-      "manifest": {},
-      "manifest_hash": {}
-    }
-  },
-  "resources": []
+  ]
 }
